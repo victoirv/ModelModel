@@ -1,28 +1,30 @@
-function ModelModels
+function ModelModels(refpoint)
+if isempty(refpoint)
+    refpoint=[14.5 0 0];
+end
 
 
 runname='Victoir_Veibell_041316_1'; 
 dataheaders={'x','y','z','bx','by','bz','jx','jy','jz','ux','uy','uz','p','rho'};
 
-refpoint=[14.5 0 0];
-filename=sprintf('data/DifferencesData_%s_%2.2f_%2.2f_%2.2f.mat',runname,refpoint(1), refpoint(2), refpoint(3));
+filename=sprintf('data/%s/DifferencesData_%s_%2.2f_%2.2f_%2.2f.mat',runname,runname,refpoint(1), refpoint(2), refpoint(3));
 
 if(exist(filename,'file'))
     load(filename)
 else
-    [status,ncuts]=system(sprintf('ls -1 ../Differences/output/%s/data/cuts/ | wc -l',runname));
+    [status,ncuts]=system(sprintf('ls -1 data/%s/data/cuts/ | wc -l',runname));
     ncuts=str2double(ncuts);
-    [status, filedata]=system(sprintf('grep -h -e "^%3.6f %3.6f %3.6f" ../Differences/output/%s/data/cuts/*',refpoint(1), refpoint(2), refpoint(3), runname)); 
+    [status, filedata]=system(sprintf('grep -h -e "^%3.6f %3.6f %3.6f" data/%s/data/cuts/*',refpoint(1), refpoint(2), refpoint(3), runname)); 
     data=cell2mat(textscan(filedata,'%f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f %f'));
 
     inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]'};
 
-    inputs=dlmread(sprintf('../Differences/data/%s_IMF.txt',runname));
+    inputs=dlmread(sprintf('data/%s/%s_IMF.txt',runname,runname));
 
     for i=1:(ncuts-1)
         bininputs(i,:)=median(inputs((i-1)*30+1:i*30,:));
     end
-    bininputs(ncuts,:)=median(inputs(ncuts-1)*30+1:end,:));
+    bininputs(ncuts,:)=median(inputs((ncuts-1)*30+1:end,:));
     
     save(filename,'data','inputs','bininputs','inputvars');
 end

@@ -8,21 +8,21 @@ dataheaders={'x','y','z','x','y','z','B_x','B_y','B_z','jx','jy','jz','ux','uy',
 
 
 
-filename=sprintf('data/DifferencesData_%s_AllCuts.mat',runname);
+filename=sprintf('data/%s/DifferencesData_%s_AllCuts.mat',runname,runname);
 
 if(exist(filename,'file'))
     load(filename)
 else
 
-    [status,ncuts]=system(sprintf('ls -1 ../Differences/output/%s/data/cuts/ | wc -l',runname));
+    [status,ncuts]=system(sprintf('ls -1 data/%s/data/cuts/ | wc -l',runname));
     ncuts=str2double(ncuts);
     for i=1:ncuts
-        data(i,:,:)=dlmread(sprintf('../Differences/output/%s/data/cuts/Step_%02d_Y_eq_0.txt',runname,i-1)); 
+        data(i,:,:)=dlmread(sprintf('data/%s/data/cuts/Step_%02d_Y_eq_0.txt',runname,i-1)); 
     end
 
     inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]'};
 
-    inputs=dlmread(sprintf('../Differences/data/%s_IMF.txt',runname));
+    inputs=dlmread(sprintf('data/%s/%s_IMF.txt',runname,runname));
     
     for i=1:(ncuts-1)
         bininputs(i,:)=median(inputs((i-1)*30+1:i*30,:));
