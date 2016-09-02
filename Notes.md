@@ -5,9 +5,22 @@
 
 
 ## History ##
+* [September 1: Correlation plots?](#september-1-2016)
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### September 1, 2016 ###
+Trying to make correlation plots. This takes quite a while and 5.5GB of memory. This is manageable with scatter3, but isosurface and contourslice require regridding to a meshgrid format which returns "Maximum variable size allowed by the program is exceeded."
+
+Two examples of attempts to plot with scatter3 though:
+![all](NoteFigures/CorrFullScatter3.eps)
+
+Or only looking at points with correlations between 0.9+-0.01:
+![poi](NoteFigures/CorrPOIScatter3.eps)
+
+Note that just looking at cutplanes doesn't reveal much of use, and an eps plots including every point take up 50+MB (and it's been generating a png for like 40 minutes so far and won't abort so calling it a night with this for now).
+
+
 ### August 31, 2016 ###
 Beginning by trying to extend correlation tests to 3D space. This runs into a few issues: First being that Brian's code pre-cuts data into slices, so either the original cdf must be used, or his code must be run for each desired slice. I've chosen the former.
 

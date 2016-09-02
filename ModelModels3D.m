@@ -5,39 +5,86 @@ end
 
 %Define what run you want to use
 runname='Victoir_Veibell_041316_1';
-%Default headers for model data
-dataheaders={'x','y','z','x','y','z','B_x','B_y','B_z','jx','jy','jz','ux','uy','uz','p','rho'};
-
 
 %Filename to save data to for easier/quicker future reading
 filename=sprintf('data/%s/DifferencesData_%s_3D.mat',runname,runname);
 
-%Commented out until I decide the best way to read in all the data
-%{
 if(exist(filename,'file'))
     load(filename)
 else
-
-    
+    %Find number of existing time steps, then read in the model data for each
+    %step into one array
     [status,ncuts]=system(sprintf('ls -1 data/%s/data/cuts/ | wc -l',runname));
     ncuts=str2double(ncuts);
-    for i=1:ncuts
-        data(i,:,:)=dlmread(sprintf('data/%s/data/cuts/Step_%02d_Y_eq_0.txt',runname,i-1)); 
-    end
 
+    %Variable names for model input data (solar wind)
     inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]'};
 
+    %Read in solar wind data
     inputs=dlmread(sprintf('data/%s/%s_IMF.txt',runname,runname));
     
+    %Bin the input data to be on the same grid as the model data that came
+    %from brian's code
     for i=1:(ncuts-1)
         bininputs(i,:)=median(inputs((i-1)*30+1:i*30,:));
     end
     bininputs(ncuts,:)=median(inputs((ncuts-1)*30+1:end,:));
     
-    save(filename,'data','inputs','bininputs','inputvars');
+    save(filename,'inputs','bininputs','inputvars');
+end
+
+
+%Default headers for model data
+dataheaders={'x','y','z','x','y','z','B_x','B_y','B_z','jx','jy','jz','ux','uy','uz','p','rho'};
+
+%Find all CDF files for each timestep and read them in to one array
+basedir='/home/victoir/Work/Differences/data/Victoir_Veibell_041316_1/GM_CDF/';
+files=dir(sprintf('%s/*cdf',basedir));
+
+for i=1:length(files)
+    currentfile=files(i).name;
+    readname=sprintf('%s/%s',basedir,currentfile);
+    readdata=cdfread(readname,'Variables',{'x','y','z','bx','by','bz','rho'});
+    readmat(i,:,:)=double(cell2mat(readdata));
     
 end
-%}
+
+warning('off','all') %lots of rank deficient warnings
+
+%Create correlations for each gridpoint
+corrmat=zeros(1,max(size(readmat)));
+for i=1:max(size(readmat))
+    [~,~,~,~,corr]=IR(readmat(:,i,7),bininputs(:,8:15),0,4);
+    corrmat(i)=corr;
+end
+    
+
+%%%%%%%%%%%%%%%%%%%%%
+%Plotting
+%%%%%%%%%%%%%%%%%%%%%
+%Plot all data
+scatter3(readmat(1,:,1),readmat(1,:,2),readmat(1,:,3),[],corrmat);
+print('-depsc2','-r200', 'NoteFigures/CorrFullScatter3.eps')
+
+%Plot only points with certain correlation
+drawcorr=0.9;
+drawwidth=0.01;
+POI=((corrmat<(drawcorr+drawwidth))+(corrmat>(drawcorr-drawwidth)))>1;
+scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+title(sprintf('Correlation values of %2.2f +- %2.2f',drawcorr,drawwidth))
+print('-depsc2','-r200', 'NoteFigures/CorrPOIScatter3.eps')
+
+%Plot a cutplane or correlations
+POI=readmat(1,:,2)==0; %Where Y=0
+scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+print('-depsc2','-r200', 'NoteFigures/CorrPOIScatter3.eps')
+
+
+
+%%%%%%%%%%%%%%
+%Stuff after here is just looking at one CDF file (one time step), not correlations
+
+
 
 %Read in CDF and convert to workable matrix. Note, not all variables have
 %the same amount of rows, but since we're selecting  ones that do we can
