@@ -49,6 +49,8 @@ for i=1:length(files)
     
 end
 
+fprintf('Done reading data. Calculating correlations\n');
+
 warning('off','all') %lots of rank deficient warnings
 
 %Create correlations for each gridpoint
@@ -58,13 +60,14 @@ for i=1:max(size(readmat))
     corrmat(i)=corr;
 end
     
-
+fprintf('Done with correlations. Plotting\n');
 %%%%%%%%%%%%%%%%%%%%%
 %Plotting
 %%%%%%%%%%%%%%%%%%%%%
 %Plot all data
 scatter3(readmat(1,:,1),readmat(1,:,2),readmat(1,:,3),[],corrmat);
 print('-depsc2','-r200', 'NoteFigures/CorrFullScatter3.eps')
+close all;
 
 %Plot only points with certain correlation
 drawcorr=0.9;
@@ -73,6 +76,19 @@ POI=((corrmat<(drawcorr+drawwidth))+(corrmat>(drawcorr-drawwidth)))>1;
 scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
 title(sprintf('Correlation values of %2.2f +- %2.2f',drawcorr,drawwidth))
 print('-depsc2','-r200', 'NoteFigures/CorrPOIScatter3.eps')
+
+
+figure;
+r=sqrt(readmat(1,:,1).^2+readmat(1,:,2).^2+readmat(1,:,3).^2);
+POI=((r<=3)+(r>=2.8))>1;
+scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+title('Correlation values of Ionosphere')
+print('-depsc2','-r200', 'NoteFigures/IonosphereScatter3.eps')
+print('-dpng','-r200', 'NoteFigures/IonosphereScatter3.png')
+
+
+figure; scatter(readmat(1,POI,1)./(1+readmat(1,POI,3)),readmat(1,POI,2)./(1+readmat(1,POI,3)),[],corrmat(POI))
+print('-dpng','-r200','NoteFigures/StereographicIonosphere.png')
 
 %Plot a cutplane or correlations
 POI=readmat(1,:,2)==0; %Where Y=0

@@ -1,6 +1,9 @@
-function ModelModelsAll(varnum)
+function ModelModelsAll(varnum,inputnum)
 if(nargin<1)
     varnum=9; %Default to B_z
+end
+if(nargin<2)
+    inputnum=[8:15];
 end
 
 %Define what run you want to use
@@ -60,7 +63,7 @@ for i=1:length(xs)
         
         %Calculate correlation through time of model at this specific point
         %given all model inputs
-        [~,~,~,~,corrs(i,j)]=IR(data(:,mi,varnum),bininputs(:,8:15),0,3);
+        [~,~,~,~,corrs(i,j)]=IR(data(:,mi,varnum),bininputs(:,inputnum),0,3);
         
         %Keep track of the mean value of the currently tested variable at
         %each point in space across all time
