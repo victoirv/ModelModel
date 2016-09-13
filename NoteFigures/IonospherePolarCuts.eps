@@ -1,0 +1,14901 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: MATLAB, The MathWorks, Inc. Version 8.3.0.532 (R2014a). Operating System: Linux 4.5.1-1-ARCH #1 SMP PREEMPT Thu Apr 14 19:19:32 CEST 2016 x86_64.
+%%Title: NoteFigures/IonospherePolarCuts.eps
+%%CreationDate: 09/13/2016  11:06:28
+%%DocumentNeededFonts: Helvetica
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%LanguageLevel: 2
+%%Pages: 1
+%%BoundingBox:    56   196   546   601
+%%EndComments
+
+%%BeginProlog
+% MathWorks dictionary
+/MathWorks 160 dict begin
+% definition operators
+/bdef {bind def} bind def
+/ldef {load def} bind def
+/xdef {exch def} bdef
+/xstore {exch store} bdef
+% operator abbreviations
+/c  /clip ldef
+/cc /concat ldef
+/cp /closepath ldef
+/gr /grestore ldef
+/gs /gsave ldef
+/mt /moveto ldef
+/np /newpath ldef
+/cm /currentmatrix ldef
+/sm /setmatrix ldef
+/rm /rmoveto ldef
+/rl /rlineto ldef
+/s {show newpath} bdef
+/sc {setcmykcolor} bdef
+/sr /setrgbcolor ldef
+/sg /setgray ldef
+/w /setlinewidth ldef
+/j /setlinejoin ldef
+/cap /setlinecap ldef
+/rc {rectclip} bdef
+/rf {rectfill} bdef
+% page state control
+/pgsv () def
+/bpage {/pgsv save def} bdef
+/epage {pgsv restore} bdef
+/bplot /gsave ldef
+/eplot {stroke grestore} bdef
+% orientation switch
+/portraitMode 0 def /landscapeMode 1 def /rotateMode 2 def
+% coordinate system mappings
+/dpi2point 0 def
+% font control
+/FontSize 0 def
+/FMS {/FontSize xstore findfont [FontSize 0 0 FontSize neg 0 0]
+  makefont setfont} bdef
+/reencode {exch dup where {pop load} {pop StandardEncoding} ifelse
+  exch dup 3 1 roll findfont dup length dict begin
+  { 1 index /FID ne {def}{pop pop} ifelse } forall
+  /Encoding exch def currentdict end definefont pop} bdef
+/isroman {findfont /CharStrings get /Agrave known} bdef
+/FMSR {3 1 roll 1 index dup isroman {reencode} {pop pop} ifelse
+  exch FMS} bdef
+/csm {1 dpi2point div -1 dpi2point div scale neg translate
+ dup landscapeMode eq {pop -90 rotate}
+  {rotateMode eq {90 rotate} if} ifelse} bdef
+% line types: solid, dotted, dashed, dotdash
+/SO { [] 0 setdash } bdef
+/DO { [.5 dpi2point mul 4 dpi2point mul] 0 setdash } bdef
+/DA { [6 dpi2point mul] 0 setdash } bdef
+/DD { [.5 dpi2point mul 4 dpi2point mul 6 dpi2point mul 4
+  dpi2point mul] 0 setdash } bdef
+% macros for lines and objects
+/L {lineto stroke} bdef
+/MP {3 1 roll moveto 1 sub {rlineto} repeat} bdef
+/AP {{rlineto} repeat} bdef
+/PDlw -1 def
+/W {/PDlw currentlinewidth def setlinewidth} def
+/PP {closepath eofill} bdef
+/DP {closepath stroke} bdef
+/MR {4 -2 roll moveto dup  0 exch rlineto exch 0 rlineto
+  neg 0 exch rlineto closepath} bdef
+/FR {MR stroke} bdef
+/PR {MR fill} bdef
+/L1i {{currentfile picstr readhexstring pop} image} bdef
+/tMatrix matrix def
+/MakeOval {newpath tMatrix currentmatrix pop translate scale
+0 0 1 0 360 arc tMatrix setmatrix} bdef
+/FO {MakeOval stroke} bdef
+/PO {MakeOval fill} bdef
+/PD {currentlinewidth 2 div 0 360 arc fill
+   PDlw -1 eq not {PDlw w /PDlw -1 def} if} def
+/FA {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arc tMatrix setmatrix stroke} bdef
+/PA {newpath tMatrix currentmatrix pop	translate 0 0 moveto scale
+  0 0 1 5 -2 roll arc closepath tMatrix setmatrix fill} bdef
+/FAn {newpath tMatrix currentmatrix pop translate scale
+  0 0 1 5 -2 roll arcn tMatrix setmatrix stroke} bdef
+/PAn {newpath tMatrix currentmatrix pop translate 0 0 moveto scale
+  0 0 1 5 -2 roll arcn closepath tMatrix setmatrix fill} bdef
+/vradius 0 def /hradius 0 def /lry 0 def
+/lrx 0 def /uly 0 def /ulx 0 def /rad 0 def
+/MRR {/vradius xdef /hradius xdef /lry xdef /lrx xdef /uly xdef
+  /ulx xdef newpath tMatrix currentmatrix pop ulx hradius add uly
+  vradius add translate hradius vradius scale 0 0 1 180 270 arc 
+  tMatrix setmatrix lrx hradius sub uly vradius add translate
+  hradius vradius scale 0 0 1 270 360 arc tMatrix setmatrix
+  lrx hradius sub lry vradius sub translate hradius vradius scale
+  0 0 1 0 90 arc tMatrix setmatrix ulx hradius add lry vradius sub
+  translate hradius vradius scale 0 0 1 90 180 arc tMatrix setmatrix
+  closepath} bdef
+/FRR {MRR stroke } bdef
+/PRR {MRR fill } bdef
+/MlrRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lry uly sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 90 270 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 270 90 arc tMatrix setmatrix
+  closepath} bdef
+/FlrRR {MlrRR stroke } bdef
+/PlrRR {MlrRR fill } bdef
+/MtbRR {/lry xdef /lrx xdef /uly xdef /ulx xdef /rad lrx ulx sub 2 div def
+  newpath tMatrix currentmatrix pop ulx rad add uly rad add translate
+  rad rad scale 0 0 1 180 360 arc tMatrix setmatrix lrx rad sub lry rad
+  sub translate rad rad scale 0 0 1 0 180 arc tMatrix setmatrix
+  closepath} bdef
+/FtbRR {MtbRR stroke } bdef
+/PtbRR {MtbRR fill } bdef
+/stri 6 array def /dtri 6 array def
+/smat 6 array def /dmat 6 array def
+/tmat1 6 array def /tmat2 6 array def /dif 3 array def
+/asub {/ind2 exch def /ind1 exch def dup dup
+  ind1 get exch ind2 get sub exch } bdef
+/tri_to_matrix {
+  2 0 asub 3 1 asub 4 0 asub 5 1 asub
+  dup 0 get exch 1 get 7 -1 roll astore } bdef
+/compute_transform {
+  dmat dtri tri_to_matrix tmat1 invertmatrix 
+  smat stri tri_to_matrix tmat2 concatmatrix } bdef
+/ds {stri astore pop} bdef
+/dt {dtri astore pop} bdef
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
+  currentfile 
+  3 index 0 eq {/ASCIIHexDecode filter}
+  {/ASCII85Decode filter 3 index 2 eq {/RunLengthDecode filter} if }
+  ifelse exch readstring pop
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
+/it {gs np dtri aload pop moveto lineto lineto cp c
+  cols rows 8 compute_transform 
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
+/il {newpath moveto lineto stroke}bdef
+currentdict end def
+%%EndProlog
+
+%%BeginSetup
+MathWorks begin
+
+0 cap
+
+end
+%%EndSetup
+
+%%Page: 1 1
+%%BeginPageSetup
+%%PageBoundingBox:    56   196   546   601
+MathWorks begin
+bpage
+%%EndPageSetup
+
+%%BeginObject: obj1
+bplot
+
+/dpi2point 2.77778 def
+portraitMode 0050 1700 csm
+
+  106    28  1362  1127 rc
+85 dict begin %Colortable dictionary
+/c0 { 0.000000 0.000000 0.000000 sr} bdef
+/c1 { 1.000000 1.000000 1.000000 sr} bdef
+/c2 { 0.900000 0.000000 0.000000 sr} bdef
+/c3 { 0.000000 0.820000 0.000000 sr} bdef
+/c4 { 0.000000 0.000000 0.800000 sr} bdef
+/c5 { 0.910000 0.820000 0.320000 sr} bdef
+/c6 { 1.000000 0.260000 0.820000 sr} bdef
+/c7 { 0.000000 0.820000 0.820000 sr} bdef
+c0
+1 j
+1 sg
+   0    0 1601 1202 rf
+1.38889 w
+0 979 535 0 0 -979 208 1069 4 MP
+PP
+-535 0 0 979 535 0 0 -979 208 1069 5 MP stroke
+0.925926 w
+DO
+0 sg
+ 208 1069 mt  208   90 L
+ 208   90 mt  208   90 L
+ 341 1069 mt  341   90 L
+ 341   90 mt  341   90 L
+ 475 1069 mt  475   90 L
+ 475   90 mt  475   90 L
+ 609 1069 mt  609   90 L
+ 609   90 mt  609   90 L
+ 743 1069 mt  743   90 L
+ 743   90 mt  743   90 L
+ 208 1069 mt  743 1069 L
+ 743 1069 mt  743 1069 L
+ 208  946 mt  743  946 L
+ 743  946 mt  743  946 L
+ 208  824 mt  743  824 L
+ 743  824 mt  743  824 L
+ 208  701 mt  743  701 L
+ 743  701 mt  743  701 L
+ 208  579 mt  743  579 L
+ 743  579 mt  743  579 L
+ 208  457 mt  743  457 L
+ 743  457 mt  743  457 L
+ 208  334 mt  743  334 L
+ 743  334 mt  743  334 L
+ 208  212 mt  743  212 L
+ 743  212 mt  743  212 L
+ 208   90 mt  743   90 L
+ 743   90 mt  743   90 L
+SO
+1.38889 w
+ 208 1069 mt  743 1069 L
+ 208 1069 mt  208   90 L
+ 208 1069 mt  208 1059 L
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 27.7778 FMSR
+
+ 185 1102 mt 
+(-4) s
+ 341 1069 mt  341 1059 L
+ 318 1102 mt 
+(-2) s
+ 475 1069 mt  475 1059 L
+ 468 1102 mt 
+(0) s
+ 609 1069 mt  609 1059 L
+ 602 1102 mt 
+(2) s
+ 743 1069 mt  743 1059 L
+ 736 1102 mt 
+(4) s
+ 208 1069 mt  217 1069 L
+ 169 1079 mt 
+(-4) s
+ 208  946 mt  217  946 L
+ 169  956 mt 
+(-3) s
+ 208  824 mt  217  824 L
+ 169  834 mt 
+(-2) s
+ 208  701 mt  217  701 L
+ 169  711 mt 
+(-1) s
+ 208  579 mt  217  579 L
+ 185  589 mt 
+(0) s
+ 208  457 mt  217  457 L
+ 185  467 mt 
+(1) s
+ 208  334 mt  217  334 L
+ 185  344 mt 
+(2) s
+ 208  212 mt  217  212 L
+ 185  222 mt 
+(3) s
+ 208   90 mt  217   90 L
+ 185  100 mt 
+(4) s
+gs 208 90 536 980 rc
+0 j
+gs 248 179 455 801 rc
+/c8 { 0.750000 0.000000 0.000000 sr} bdef
+c8
+   8    8  617  288 FO
+gr
+
+c8
+gs 248 179 455 801 rc
+   8    8  634  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  319 FO
+gr
+
+gs 248 179 455 801 rc
+/c9 { 0.000000 0.000000 0.875000 sr} bdef
+c9
+   8    8  517  197 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  500  197 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  197 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  258 FO
+gr
+
+gs 248 179 455 801 rc
+/c10 { 0.000000 0.000000 0.937500 sr} bdef
+c10
+   8    8  600  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c9
+   8    8  584  288 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  600  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  197 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  483  197 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c9
+   8    8  550  227 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  534  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  227 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  500  227 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c9
+   8    8  483  227 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+c10
+   8    8  584  258 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c9
+   8    8  567  258 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  550  258 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  600  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c9
+   8    8  584  288 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+c10
+   8    8  600  319 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  483  197 FO
+gr
+
+gs 248 179 455 801 rc
+c9
+   8    8  550  227 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  534  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  227 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  500  227 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  483  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  258 FO
+gr
+
+gs 248 179 455 801 rc
+c9
+   8    8  567  258 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  550  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  258 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  600  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  584  288 FO
+gr
+
+gs 248 179 455 801 rc
+c9
+   8    8  567  288 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+c10
+   8    8  600  319 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c9
+   8    8  534  227 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+c10
+   8    8  517  227 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  500  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  258 FO
+gr
+
+gs 248 179 455 801 rc
+c9
+   8    8  550  258 FO
+gr
+
+c9
+gs 248 179 455 801 rc
+   8    8  534  258 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  517  258 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  600  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  288 FO
+gr
+
+gs 248 179 455 801 rc
+/c11 { 0.000000 0.000000 1.000000 sr} bdef
+c11
+   8    8  600  319 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+c10
+   8    8  584  319 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  483  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  258 FO
+gr
+
+gs 248 179 455 801 rc
+c11
+   8    8  584  288 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+c10
+   8    8  567  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  550  288 FO
+gr
+
+gs 248 179 455 801 rc
+c11
+   8    8  534  288 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+c10
+   8    8  517  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c11
+   8    8  600  319 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+   8    8  584  319 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  567  319 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c11
+   8    8  517  258 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+c10
+   8    8  500  258 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  483  258 FO
+gr
+
+gs 248 179 455 801 rc
+c11
+   8    8  567  288 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+   8    8  550  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  288 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  500  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+   8    8  483  288 FO
+gr
+
+gs 248 179 455 801 rc
+c11
+   8    8  584  319 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+   8    8  567  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  288 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  483  288 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+c11
+   8    8  567  319 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+   8    8  550  319 FO
+gr
+
+gs 248 179 455 801 rc
+/c12 { 0.000000 0.062500 1.000000 sr} bdef
+c12
+   8    8  534  319 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c11
+   8    8  517  319 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+   8    8  500  319 FO
+gr
+
+gs 248 179 455 801 rc
+c10
+   8    8  483  319 FO
+gr
+
+c10
+gs 248 179 455 801 rc
+/c13 { 0.500000 1.000000 0.500000 sr} bdef
+c13
+   8    8  634  350 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  617  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  380 FO
+gr
+
+gs 248 179 455 801 rc
+/c14 { 0.562500 1.000000 0.437500 sr} bdef
+c14
+   8    8  634  380 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  667  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  684  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  684  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  684  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  564 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  634  350 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  617  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  380 FO
+gr
+
+gs 248 179 455 801 rc
+c14
+   8    8  651  411 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  667  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  684  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  684  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  564 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  634  350 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  617  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  380 FO
+gr
+
+gs 248 179 455 801 rc
+c14
+   8    8  651  411 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  634  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  684  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  564 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  634  350 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  617  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  380 FO
+gr
+
+gs 248 179 455 801 rc
+c14
+   8    8  651  411 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  634  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  564 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  617  350 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  634  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  411 FO
+gr
+
+gs 248 179 455 801 rc
+c14
+   8    8  634  411 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  651  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  564 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  617  350 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  634  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  380 FO
+gr
+
+gs 248 179 455 801 rc
+c14
+   8    8  634  411 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c13
+   8    8  617  411 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c14
+   8    8  651  441 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  634  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  564 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  617  380 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c14
+   8    8  634  411 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c13
+   8    8  617  411 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c14
+   8    8  634  441 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  617  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  564 FO
+gr
+
+gs 248 179 455 801 rc
+/c15 { 0.000000 0.312500 1.000000 sr} bdef
+c15
+   8    8  600  350 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  600  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  350 FO
+gr
+
+gs 248 179 455 801 rc
+/c16 { 0.000000 0.375000 1.000000 sr} bdef
+c16
+   8    8  600  380 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+c15
+   8    8  584  380 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+c16
+   8    8  600  411 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+c15
+   8    8  584  350 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  567  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  350 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  600  380 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  584  380 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  567  380 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+c16
+   8    8  600  411 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  584  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  441 FO
+gr
+
+gs 248 179 455 801 rc
+/c17 { 0.000000 0.937500 1.000000 sr} bdef
+c17
+   8    8  483  288 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+/c18 { 0.000000 0.812500 1.000000 sr} bdef
+c18
+   8    8  534  319 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+/c19 { 0.000000 0.875000 1.000000 sr} bdef
+c19
+   8    8  517  319 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c17
+   8    8  500  319 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+   8    8  483  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  319 FO
+gr
+
+gs 248 179 455 801 rc
+/c20 { 0.000000 0.437500 1.000000 sr} bdef
+c20
+   8    8  617  472 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c16
+   8    8  617  503 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+c20
+   8    8  617  533 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  634  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  564 FO
+gr
+
+gs 248 179 455 801 rc
+/c21 { 0.000000 0.625000 1.000000 sr} bdef
+c21
+   8    8  567  350 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+/c22 { 0.000000 0.687500 1.000000 sr} bdef
+c22
+   8    8  550  350 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  534  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  503 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  567  503 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c22
+   8    8  600  533 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c21
+   8    8  584  533 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  600  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  564 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  517  380 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  500  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  503 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  567  503 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  550  503 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  534  503 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c21
+   8    8  584  533 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  567  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  564 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  483  411 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  517  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  472 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  550  503 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  534  503 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  517  503 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  500  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  503 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  550  533 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  534  533 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  517  533 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  500  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  533 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  567  564 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  550  564 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  534  564 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  517  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  564 FO
+gr
+
+gs 248 179 455 801 rc
+/c23 { 0.000000 0.125000 1.000000 sr} bdef
+c23
+   8    8  467  197 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  450  197 FO
+gr
+
+gs 248 179 455 801 rc
+c12
+   8    8  433  197 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c23
+   8    8  467  227 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  450  227 FO
+gr
+
+gs 248 179 455 801 rc
+c12
+   8    8  433  227 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+   8    8  416  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  227 FO
+gr
+
+gs 248 179 455 801 rc
+c11
+   8    8  383  227 FO
+gr
+
+c11
+gs 248 179 455 801 rc
+c12
+   8    8  400  258 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+   8    8  383  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  288 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  350  319 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+/c24 { 0.000000 0.187500 1.000000 sr} bdef
+c24
+   8    8  467  197 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  450  197 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  467  227 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  450  227 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  433  227 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  416  227 FO
+gr
+
+gs 248 179 455 801 rc
+c12
+   8    8  400  227 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+   8    8  400  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  258 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  366  288 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  350  288 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  350  319 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  467  197 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  227 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  400  227 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  416  258 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  400  258 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  383  258 FO
+gr
+
+gs 248 179 455 801 rc
+c12
+   8    8  366  258 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c23
+   8    8  383  288 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  366  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  288 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  350  319 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  467  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  227 FO
+gr
+
+gs 248 179 455 801 rc
+/c25 { 0.000000 0.250000 1.000000 sr} bdef
+c25
+   8    8  433  258 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c24
+   8    8  416  258 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  400  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  288 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  366  288 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  350  288 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  366  319 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  350  319 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  467  227 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  450  227 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  433  227 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  258 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  433  258 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  416  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  258 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  383  258 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c25
+   8    8  400  288 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c24
+   8    8  383  288 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  366  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  319 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  467  227 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  467  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  258 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  433  258 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  416  258 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  400  258 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  433  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  288 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  383  288 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  366  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  319 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  467  258 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  450  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  258 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  288 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  288 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  416  288 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  400  288 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  383  288 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c24
+   8    8  416  319 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c25
+   8    8  400  319 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c24
+   8    8  383  319 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  366  319 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  467  288 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  450  288 FO
+gr
+
+gs 248 179 455 801 rc
+c12
+   8    8  433  288 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c23
+   8    8  416  288 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  467  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  319 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  400  319 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  383  319 FO
+gr
+
+gs 248 179 455 801 rc
+/c26 { 0.000000 0.000000 0.562500 sr} bdef
+c26
+   8    8  333  288 FO
+gr
+
+c26
+gs 248 179 455 801 rc
+   8    8  333  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  319 FO
+gr
+
+gs 248 179 455 801 rc
+/c27 { 0.000000 0.750000 1.000000 sr} bdef
+c27
+   8    8  350  350 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  366  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  380 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  350  380 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  366  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  441 FO
+gr
+
+gs 248 179 455 801 rc
+c20
+   8    8  333  350 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  316  350 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  316  380 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  299  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  411 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  283  411 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  299  441 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  283  441 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  283  472 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  283  503 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  266  503 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  283  533 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  266  533 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  283  564 FO
+gr
+
+gs 248 179 455 801 rc
+c12
+   8    8  266  564 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c20
+   8    8  333  350 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  316  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  380 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  299  380 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  299  411 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  299  441 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  283  441 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  283  472 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  283  503 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  283  533 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  266  533 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  283  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  266  564 FO
+gr
+
+gs 248 179 455 801 rc
+/c28 { 0.000000 0.500000 1.000000 sr} bdef
+c28
+   8    8  333  350 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c20
+   8    8  316  350 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  316  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  380 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  316  411 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  299  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  441 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  283  441 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  299  472 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  283  472 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  283  503 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  283  533 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  283  564 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  266  564 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c28
+   8    8  333  350 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  316  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  380 FO
+gr
+
+gs 248 179 455 801 rc
+c20
+   8    8  316  380 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  316  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  411 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  299  441 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  299  472 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  283  472 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  299  503 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  283  503 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  283  533 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  283  564 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+/c29 { 0.000000 0.562500 1.000000 sr} bdef
+c29
+   8    8  333  350 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+   8    8  333  380 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  316  380 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  316  411 FO
+gr
+
+gs 248 179 455 801 rc
+c20
+   8    8  299  411 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  316  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  441 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  299  472 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  299  503 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  283  503 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  299  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  283  533 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  299  564 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  283  564 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  333  350 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c29
+   8    8  333  380 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+   8    8  316  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  411 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  316  441 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  299  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  472 FO
+gr
+
+gs 248 179 455 801 rc
+c20
+   8    8  299  472 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  316  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  503 FO
+gr
+
+gs 248 179 455 801 rc
+c16
+   8    8  299  533 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+c15
+   8    8  299  564 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  283  564 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  333  380 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  333  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  441 FO
+gr
+
+gs 248 179 455 801 rc
+c29
+   8    8  316  441 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+   8    8  333  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  503 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  299  503 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  316  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  299  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  564 FO
+gr
+
+gs 248 179 455 801 rc
+c20
+   8    8  299  564 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c22
+   8    8  333  411 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  333  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  472 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  316  472 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  333  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  316  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  564 FO
+gr
+
+gs 248 179 455 801 rc
+c29
+   8    8  316  564 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+/c30 { 0.812500 1.000000 0.187500 sr} bdef
+c30
+   8    8  467  288 FO
+gr
+
+c30
+gs 248 179 455 801 rc
+   8    8  467  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  319 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  319 FO
+gr
+
+gs 248 179 455 801 rc
+/c31 { 0.750000 1.000000 0.250000 sr} bdef
+c31
+   8    8  416  319 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+c30
+   8    8  467  319 FO
+gr
+
+c30
+gs 248 179 455 801 rc
+c29
+   8    8  467  350 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+c21
+   8    8  450  350 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+   8    8  433  350 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  416  350 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  400  350 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  350 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  416  380 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  400  380 FO
+gr
+
+gs 248 179 455 801 rc
+c27
+   8    8  383  380 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  366  380 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  383  411 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  366  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  411 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  366  441 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  350  441 FO
+gr
+
+gs 248 179 455 801 rc
+c17
+   8    8  366  472 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  350  472 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c17
+   8    8  350  503 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+/c32 { 0.000000 1.000000 1.000000 sr} bdef
+c32
+   8    8  350  533 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+   8    8  350  564 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  467  350 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  450  350 FO
+gr
+
+gs 248 179 455 801 rc
+c29
+   8    8  433  350 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+   8    8  416  350 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  467  380 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c22
+   8    8  450  380 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  433  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  380 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  433  411 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  416  411 FO
+gr
+
+gs 248 179 455 801 rc
+c27
+   8    8  400  411 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  383  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  411 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  400  441 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  383  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  441 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  383  472 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  366  472 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  350  472 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  383  503 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  366  503 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  350  503 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c19
+   8    8  366  533 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  350  533 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  564 FO
+gr
+
+gs 248 179 455 801 rc
+c29
+   8    8  467  380 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+   8    8  450  380 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  380 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  467  411 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  450  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  411 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  411 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  467  441 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  450  441 FO
+gr
+
+gs 248 179 455 801 rc
+c27
+   8    8  433  441 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  416  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  441 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  433  472 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  416  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  472 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  472 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  416  503 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  400  503 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  383  503 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  366  503 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  400  533 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  383  533 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  366  533 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  400  564 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  383  564 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  366  564 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c21
+   8    8  467  411 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c22
+   8    8  467  441 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+   8    8  450  441 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  441 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  467  472 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  450  472 FO
+gr
+
+gs 248 179 455 801 rc
+c27
+   8    8  433  472 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  416  472 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  467  503 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  450  503 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  433  503 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  416  503 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  503 FO
+gr
+
+gs 248 179 455 801 rc
+c17
+   8    8  467  533 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+   8    8  450  533 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  433  533 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  416  533 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  400  533 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+/c33 { 0.062500 1.000000 0.937500 sr} bdef
+c33
+   8    8  467  564 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  450  564 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  433  564 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  416  564 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  400  564 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  383  564 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  503 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  467  533 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  450  533 FO
+gr
+
+gs 248 179 455 801 rc
+c17
+   8    8  467  564 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+   8    8  450  564 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  433  564 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+/c34 { 0.375000 1.000000 0.625000 sr} bdef
+c34
+   8    8  333  472 FO
+gr
+
+c34
+gs 248 179 455 801 rc
+/c35 { 0.312500 1.000000 0.687500 sr} bdef
+c35
+   8    8  333  503 FO
+gr
+
+c35
+gs 248 179 455 801 rc
+/c36 { 0.125000 1.000000 0.875000 sr} bdef
+c36
+   8    8  333  533 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c32
+   8    8  333  564 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  316  564 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c17
+   8    8  333  564 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c16
+   8    8  684  594 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+c15
+   8    8  667  594 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+c28
+   8    8  684  625 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c20
+   8    8  667  625 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c29
+   8    8  684  655 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+c28
+   8    8  667  655 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  667  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  747 FO
+gr
+
+gs 248 179 455 801 rc
+c20
+   8    8  651  747 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c16
+   8    8  651  778 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  634  778 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  634  808 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+   8    8  617  808 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  684  594 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c12
+   8    8  667  594 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c24
+   8    8  684  625 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  667  625 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  667  655 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  667  686 FO
+gr
+
+gs 248 179 455 801 rc
+c25
+   8    8  667  717 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  651  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  778 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  778 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  634  808 FO
+gr
+
+gs 248 179 455 801 rc
+c15
+   8    8  617  808 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+c12
+   8    8  684  594 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c23
+   8    8  667  594 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+   8    8  667  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  667  686 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  651  686 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  667  717 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  651  717 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c25
+   8    8  651  747 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c15
+   8    8  634  747 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+c25
+   8    8  651  778 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c16
+   8    8  634  778 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+   8    8  634  808 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  617  808 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c21
+   8    8  667  594 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c28
+   8    8  667  625 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c20
+   8    8  667  655 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c28
+   8    8  651  655 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c16
+   8    8  667  686 FO
+gr
+
+c16
+gs 248 179 455 801 rc
+c28
+   8    8  651  686 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  651  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  651  747 FO
+gr
+
+gs 248 179 455 801 rc
+c21
+   8    8  634  747 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c22
+   8    8  634  778 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c18
+   8    8  617  778 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c27
+   8    8  634  808 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c19
+   8    8  617  808 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+/c37 { 0.250000 1.000000 0.750000 sr} bdef
+c37
+   8    8  667  594 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c34
+   8    8  651  594 FO
+gr
+
+c34
+gs 248 179 455 801 rc
+c33
+   8    8  667  625 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+/c38 { 0.187500 1.000000 0.812500 sr} bdef
+c38
+   8    8  651  625 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c17
+   8    8  667  655 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  651  655 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  651  686 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  651  717 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  634  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c17
+   8    8  651  747 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  634  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  634  778 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c35
+   8    8  617  778 FO
+gr
+
+c35
+gs 248 179 455 801 rc
+c34
+   8    8  617  808 FO
+gr
+
+c34
+gs 248 179 455 801 rc
+/c39 { 0.875000 1.000000 0.125000 sr} bdef
+c39
+   8    8  667  594 FO
+gr
+
+c39
+gs 248 179 455 801 rc
+/c40 { 0.937500 1.000000 0.062500 sr} bdef
+c40
+   8    8  651  594 FO
+gr
+
+c40
+gs 248 179 455 801 rc
+c31
+   8    8  651  625 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+/c41 { 0.625000 1.000000 0.375000 sr} bdef
+c41
+   8    8  651  655 FO
+gr
+
+c41
+gs 248 179 455 801 rc
+c31
+   8    8  634  655 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+c14
+   8    8  651  686 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c41
+   8    8  634  686 FO
+gr
+
+c41
+gs 248 179 455 801 rc
+c14
+   8    8  651  717 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c41
+   8    8  634  717 FO
+gr
+
+c41
+gs 248 179 455 801 rc
+   8    8  634  747 FO
+gr
+
+gs 248 179 455 801 rc
+c31
+   8    8  617  747 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+c41
+   8    8  634  778 FO
+gr
+
+c41
+gs 248 179 455 801 rc
+c31
+   8    8  617  778 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+c30
+   8    8  617  808 FO
+gr
+
+c30
+gs 248 179 455 801 rc
+/c42 { 1.000000 0.562500 0.000000 sr} bdef
+c42
+   8    8  651  594 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+/c43 { 1.000000 0.500000 0.000000 sr} bdef
+c43
+   8    8  634  594 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+/c44 { 1.000000 0.687500 0.000000 sr} bdef
+c44
+   8    8  651  625 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+/c45 { 1.000000 0.625000 0.000000 sr} bdef
+c45
+   8    8  634  625 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+/c46 { 1.000000 0.812500 0.000000 sr} bdef
+c46
+   8    8  651  655 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+/c47 { 1.000000 0.750000 0.000000 sr} bdef
+c47
+   8    8  634  655 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c46
+   8    8  634  686 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+c47
+   8    8  617  686 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+/c48 { 1.000000 0.875000 0.000000 sr} bdef
+c48
+   8    8  634  717 FO
+gr
+
+c48
+gs 248 179 455 801 rc
+c47
+   8    8  617  717 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c48
+   8    8  634  747 FO
+gr
+
+c48
+gs 248 179 455 801 rc
+c46
+   8    8  617  747 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+   8    8  617  778 FO
+gr
+
+gs 248 179 455 801 rc
+/c49 { 1.000000 0.187500 0.000000 sr} bdef
+c49
+   8    8  634  594 FO
+gr
+
+c49
+gs 248 179 455 801 rc
+/c50 { 1.000000 0.125000 0.000000 sr} bdef
+c50
+   8    8  617  594 FO
+gr
+
+c50
+gs 248 179 455 801 rc
+/c51 { 1.000000 0.250000 0.000000 sr} bdef
+c51
+   8    8  634  625 FO
+gr
+
+c51
+gs 248 179 455 801 rc
+c49
+   8    8  617  625 FO
+gr
+
+c49
+gs 248 179 455 801 rc
+/c52 { 1.000000 0.312500 0.000000 sr} bdef
+c52
+   8    8  634  655 FO
+gr
+
+c52
+gs 248 179 455 801 rc
+c51
+   8    8  617  655 FO
+gr
+
+c51
+gs 248 179 455 801 rc
+/c53 { 1.000000 0.375000 0.000000 sr} bdef
+c53
+   8    8  634  686 FO
+gr
+
+c53
+gs 248 179 455 801 rc
+c52
+   8    8  617  686 FO
+gr
+
+c52
+gs 248 179 455 801 rc
+c53
+   8    8  617  717 FO
+gr
+
+c53
+gs 248 179 455 801 rc
+/c54 { 1.000000 0.437500 0.000000 sr} bdef
+c54
+   8    8  617  747 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+c15
+   8    8  600  808 FO
+gr
+
+c15
+gs 248 179 455 801 rc
+c25
+   8    8  600  778 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+   8    8  600  808 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  808 FO
+gr
+
+gs 248 179 455 801 rc
+c24
+   8    8  600  747 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  600  778 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  584  778 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c25
+   8    8  600  808 FO
+gr
+
+c25
+gs 248 179 455 801 rc
+c24
+   8    8  584  808 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  567  808 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  600  717 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+   8    8  600  747 FO
+gr
+
+gs 248 179 455 801 rc
+c23
+   8    8  584  747 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c24
+   8    8  600  778 FO
+gr
+
+c24
+gs 248 179 455 801 rc
+c23
+   8    8  584  778 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c12
+   8    8  567  778 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+c23
+   8    8  584  808 FO
+gr
+
+c23
+gs 248 179 455 801 rc
+c12
+   8    8  567  808 FO
+gr
+
+c12
+gs 248 179 455 801 rc
+   8    8  550  808 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  634  839 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  617  839 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  617  870 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  617  839 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  617  839 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  617  839 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c18
+   8    8  600  839 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c33
+   8    8  600  870 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c17
+   8    8  584  870 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c38
+   8    8  584  900 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  567  900 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c17
+   8    8  550  900 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c37
+   8    8  567  931 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  550  931 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  534  931 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c17
+   8    8  517  931 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  500  931 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  483  931 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c36
+   8    8  517  961 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  500  961 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  483  961 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c22
+   8    8  600  839 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c19
+   8    8  600  870 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c27
+   8    8  584  870 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c17
+   8    8  584  900 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  567  900 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c27
+   8    8  550  900 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c17
+   8    8  550  931 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  534  931 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c27
+   8    8  517  931 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  500  931 FO
+gr
+
+gs 248 179 455 801 rc
+c22
+   8    8  483  931 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c19
+   8    8  500  961 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  483  961 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c17
+   8    8  600  839 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  600  870 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+   8    8  584  870 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  567  870 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c19
+   8    8  584  900 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  567  900 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  550  900 FO
+gr
+
+gs 248 179 455 801 rc
+c27
+   8    8  534  900 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c19
+   8    8  550  931 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  534  931 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  517  931 FO
+gr
+
+gs 248 179 455 801 rc
+c27
+   8    8  500  931 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c18
+   8    8  483  931 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+   8    8  483  961 FO
+gr
+
+gs 248 179 455 801 rc
+c41
+   8    8  600  839 FO
+gr
+
+c41
+gs 248 179 455 801 rc
+c14
+   8    8  584  839 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c34
+   8    8  600  870 FO
+gr
+
+c34
+gs 248 179 455 801 rc
+   8    8  584  870 FO
+gr
+
+gs 248 179 455 801 rc
+c35
+   8    8  567  870 FO
+gr
+
+c35
+gs 248 179 455 801 rc
+c38
+   8    8  567  900 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  550  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  900 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  534  931 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  517  931 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  500  931 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  483  931 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c42
+   8    8  600  839 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c44
+   8    8  584  839 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+/c55 { 1.000000 0.937500 0.000000 sr} bdef
+c55
+   8    8  584  870 FO
+gr
+
+c55
+gs 248 179 455 801 rc
+/c56 { 1.000000 1.000000 0.000000 sr} bdef
+c56
+   8    8  567  870 FO
+gr
+
+c56
+gs 248 179 455 801 rc
+c40
+   8    8  550  870 FO
+gr
+
+c40
+gs 248 179 455 801 rc
+c30
+   8    8  567  900 FO
+gr
+
+c30
+gs 248 179 455 801 rc
+   8    8  550  900 FO
+gr
+
+gs 248 179 455 801 rc
+c31
+   8    8  534  900 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+c30
+   8    8  517  900 FO
+gr
+
+c30
+gs 248 179 455 801 rc
+   8    8  500  900 FO
+gr
+
+gs 248 179 455 801 rc
+c39
+   8    8  483  900 FO
+gr
+
+c39
+gs 248 179 455 801 rc
+c41
+   8    8  517  931 FO
+gr
+
+c41
+gs 248 179 455 801 rc
+/c57 { 0.687500 1.000000 0.312500 sr} bdef
+c57
+   8    8  500  931 FO
+gr
+
+c57
+gs 248 179 455 801 rc
+c31
+   8    8  483  931 FO
+gr
+
+c31
+gs 248 179 455 801 rc
+/c58 { 0.937500 0.000000 0.000000 sr} bdef
+c58
+   8    8  600  839 FO
+gr
+
+c58
+gs 248 179 455 801 rc
+/c59 { 1.000000 0.000000 0.000000 sr} bdef
+c59
+   8    8  584  839 FO
+gr
+
+c59
+gs 248 179 455 801 rc
+c50
+   8    8  567  839 FO
+gr
+
+c50
+gs 248 179 455 801 rc
+c51
+   8    8  584  870 FO
+gr
+
+c51
+gs 248 179 455 801 rc
+c52
+   8    8  567  870 FO
+gr
+
+c52
+gs 248 179 455 801 rc
+c53
+   8    8  550  870 FO
+gr
+
+c53
+gs 248 179 455 801 rc
+c54
+   8    8  534  870 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+c43
+   8    8  517  870 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  550  900 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c45
+   8    8  534  900 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+   8    8  517  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  500  900 FO
+gr
+
+gs 248 179 455 801 rc
+c42
+   8    8  483  900 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c44
+   8    8  483  931 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+/c60 { 0.625000 0.000000 0.000000 sr} bdef
+c60
+   8    8  584  839 FO
+gr
+
+c60
+gs 248 179 455 801 rc
+/c61 { 0.687500 0.000000 0.000000 sr} bdef
+c61
+   8    8  567  839 FO
+gr
+
+c61
+gs 248 179 455 801 rc
+c8
+   8    8  550  839 FO
+gr
+
+c8
+gs 248 179 455 801 rc
+/c62 { 0.812500 0.000000 0.000000 sr} bdef
+c62
+   8    8  534  839 FO
+gr
+
+c62
+gs 248 179 455 801 rc
+   8    8  567  870 FO
+gr
+
+gs 248 179 455 801 rc
+/c63 { 0.875000 0.000000 0.000000 sr} bdef
+c63
+   8    8  550  870 FO
+gr
+
+c63
+gs 248 179 455 801 rc
+c58
+   8    8  534  870 FO
+gr
+
+c58
+gs 248 179 455 801 rc
+c59
+   8    8  517  870 FO
+gr
+
+c59
+gs 248 179 455 801 rc
+/c64 { 1.000000 0.062500 0.000000 sr} bdef
+c64
+   8    8  500  870 FO
+gr
+
+c64
+gs 248 179 455 801 rc
+c59
+   8    8  483  870 FO
+gr
+
+c59
+gs 248 179 455 801 rc
+c50
+   8    8  517  900 FO
+gr
+
+c50
+gs 248 179 455 801 rc
+   8    8  500  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  900 FO
+gr
+
+gs 248 179 455 801 rc
+/c65 { 0.500000 0.000000 0.000000 sr} bdef
+c65
+   8    8  567  839 FO
+gr
+
+c65
+gs 248 179 455 801 rc
+   8    8  550  839 FO
+gr
+
+gs 248 179 455 801 rc
+c60
+   8    8  534  839 FO
+gr
+
+c60
+gs 248 179 455 801 rc
+c61
+   8    8  517  839 FO
+gr
+
+c61
+gs 248 179 455 801 rc
+   8    8  500  839 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  839 FO
+gr
+
+gs 248 179 455 801 rc
+c60
+   8    8  534  870 FO
+gr
+
+c60
+gs 248 179 455 801 rc
+c61
+   8    8  517  870 FO
+gr
+
+c61
+gs 248 179 455 801 rc
+c8
+   8    8  500  870 FO
+gr
+
+c8
+gs 248 179 455 801 rc
+   8    8  483  870 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  634  594 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c27
+   8    8  617  594 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+   8    8  617  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  617  594 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  600  594 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  600  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  747 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  584  778 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  567  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  550  778 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  778 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  808 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  808 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  808 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  517  808 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  500  808 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  483  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  600  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  600  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  747 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  517  747 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  567  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  550  778 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  778 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  517  778 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+   8    8  500  778 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  483  778 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  534  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  517  808 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  500  808 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  483  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  584  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  584  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  567  655 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  550  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  534  655 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  567  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  550  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  686 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  517  686 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  567  717 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  550  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  534  717 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  517  717 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  500  717 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  483  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  550  747 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  534  747 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  517  747 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+   8    8  500  747 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  483  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  517  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c37
+   8    8  500  778 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  483  778 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  567  594 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  550  594 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  534  594 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  517  594 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c32
+   8    8  500  594 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  483  594 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c38
+   8    8  550  625 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c37
+   8    8  534  625 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  517  625 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c32
+   8    8  500  625 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  483  625 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c38
+   8    8  550  655 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  534  655 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  517  655 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c33
+   8    8  500  655 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  483  655 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c38
+   8    8  534  686 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c37
+   8    8  517  686 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  500  686 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c32
+   8    8  483  686 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c37
+   8    8  517  717 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  500  717 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  483  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  483  747 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  517  594 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c32
+   8    8  500  594 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  483  594 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  500  625 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c17
+   8    8  483  625 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c32
+   8    8  483  655 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c63
+   8    8  534  839 FO
+gr
+
+c63
+gs 248 179 455 801 rc
+c62
+   8    8  517  839 FO
+gr
+
+c62
+gs 248 179 455 801 rc
+c61
+   8    8  500  839 FO
+gr
+
+c61
+gs 248 179 455 801 rc
+c60
+   8    8  483  839 FO
+gr
+
+c60
+gs 248 179 455 801 rc
+   8    8  483  870 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  483  839 FO
+gr
+
+gs 248 179 455 801 rc
+/c66 { 0.437500 1.000000 0.562500 sr} bdef
+c66
+   8    8  350  808 FO
+gr
+
+c66
+gs 248 179 455 801 rc
+   8    8  350  778 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  366  808 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  350  808 FO
+gr
+
+gs 248 179 455 801 rc
+c66
+   8    8  350  747 FO
+gr
+
+c66
+gs 248 179 455 801 rc
+c13
+   8    8  366  778 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c14
+   8    8  350  778 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c13
+   8    8  383  808 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c14
+   8    8  366  808 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+   8    8  350  808 FO
+gr
+
+gs 248 179 455 801 rc
+c13
+   8    8  350  717 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+   8    8  366  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  747 FO
+gr
+
+gs 248 179 455 801 rc
+c66
+   8    8  383  778 FO
+gr
+
+c66
+gs 248 179 455 801 rc
+c13
+   8    8  366  778 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c14
+   8    8  350  778 FO
+gr
+
+c14
+gs 248 179 455 801 rc
+c13
+   8    8  400  808 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c66
+   8    8  383  808 FO
+gr
+
+c66
+gs 248 179 455 801 rc
+c13
+   8    8  366  808 FO
+gr
+
+c13
+gs 248 179 455 801 rc
+c20
+   8    8  283  594 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  266  594 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  283  625 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c20
+   8    8  266  625 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c21
+   8    8  283  655 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c28
+   8    8  266  655 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c22
+   8    8  283  686 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c18
+   8    8  299  717 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c27
+   8    8  283  717 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c19
+   8    8  299  747 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  283  747 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c32
+   8    8  316  778 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  299  778 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  333  808 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  316  808 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c28
+   8    8  283  594 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c20
+   8    8  266  594 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c29
+   8    8  283  625 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+c28
+   8    8  266  625 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c22
+   8    8  283  655 FO
+gr
+
+c22
+gs 248 179 455 801 rc
+c27
+   8    8  283  686 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c19
+   8    8  299  717 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  283  717 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c17
+   8    8  299  747 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  316  778 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  299  778 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c36
+   8    8  333  808 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  316  808 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c29
+   8    8  283  594 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+c20
+   8    8  266  594 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+c21
+   8    8  283  625 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c27
+   8    8  283  655 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c19
+   8    8  299  686 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  283  686 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c17
+   8    8  299  717 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  283  717 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c33
+   8    8  316  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  299  747 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  316  778 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  299  778 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  333  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  316  808 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c21
+   8    8  283  594 FO
+gr
+
+c21
+gs 248 179 455 801 rc
+c27
+   8    8  283  625 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c19
+   8    8  299  655 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  283  655 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c17
+   8    8  299  686 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c19
+   8    8  283  686 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c33
+   8    8  299  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  316  747 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  299  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  333  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  316  778 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  333  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  316  808 FO
+gr
+
+gs 248 179 455 801 rc
+c18
+   8    8  299  594 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c27
+   8    8  283  594 FO
+gr
+
+c27
+gs 248 179 455 801 rc
+c17
+   8    8  299  625 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c18
+   8    8  283  625 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c32
+   8    8  299  655 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  283  655 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+c33
+   8    8  299  686 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  316  717 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  299  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  316  747 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  299  747 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  333  778 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  316  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  333  808 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c32
+   8    8  299  594 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c19
+   8    8  283  594 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c32
+   8    8  299  625 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c36
+   8    8  316  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  299  655 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  316  686 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  299  686 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  316  717 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  299  717 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  333  747 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  316  747 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  333  778 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  316  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  333  808 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  316  594 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  299  594 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  316  625 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  299  625 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  316  655 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  299  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  333  686 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  316  686 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  333  717 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  316  717 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  333  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  316  747 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  333  778 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c38
+   8    8  333  594 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  316  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  625 FO
+gr
+
+gs 248 179 455 801 rc
+c37
+   8    8  316  625 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  333  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  316  655 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  333  686 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c38
+   8    8  316  686 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c33
+   8    8  333  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  333  747 FO
+gr
+
+gs 248 179 455 801 rc
+c56
+   8    8  350  839 FO
+gr
+
+c56
+gs 248 179 455 801 rc
+c46
+   8    8  366  870 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+c55
+   8    8  350  870 FO
+gr
+
+c55
+gs 248 179 455 801 rc
+c45
+   8    8  400  900 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c44
+   8    8  383  900 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c46
+   8    8  366  900 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+c53
+   8    8  467  931 FO
+gr
+
+c53
+gs 248 179 455 801 rc
+   8    8  450  931 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  433  931 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  416  931 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c44
+   8    8  400  931 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c47
+   8    8  383  931 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c53
+   8    8  467  961 FO
+gr
+
+c53
+gs 248 179 455 801 rc
+   8    8  450  961 FO
+gr
+
+gs 248 179 455 801 rc
+c54
+   8    8  433  961 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+c46
+   8    8  350  839 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+c44
+   8    8  366  870 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c46
+   8    8  350  870 FO
+gr
+
+c46
+gs 248 179 455 801 rc
+c45
+   8    8  400  900 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+   8    8  383  900 FO
+gr
+
+gs 248 179 455 801 rc
+c44
+   8    8  366  900 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c53
+   8    8  467  931 FO
+gr
+
+c53
+gs 248 179 455 801 rc
+c54
+   8    8  450  931 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  433  931 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  416  931 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c45
+   8    8  400  931 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c54
+   8    8  467  961 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  450  961 FO
+gr
+
+gs 248 179 455 801 rc
+c47
+   8    8  350  839 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c45
+   8    8  383  870 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c44
+   8    8  366  870 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c47
+   8    8  350  870 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c43
+   8    8  416  900 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  400  900 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c45
+   8    8  383  900 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c44
+   8    8  366  900 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c54
+   8    8  467  931 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  450  931 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  931 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  416  931 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  400  931 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c54
+   8    8  467  961 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+c44
+   8    8  366  839 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c47
+   8    8  350  839 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c45
+   8    8  383  870 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c44
+   8    8  366  870 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c47
+   8    8  350  870 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c54
+   8    8  433  900 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  416  900 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  400  900 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  383  900 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c54
+   8    8  467  931 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  450  931 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  931 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  931 FO
+gr
+
+gs 248 179 455 801 rc
+c44
+   8    8  366  839 FO
+gr
+
+c44
+gs 248 179 455 801 rc
+c47
+   8    8  350  839 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c43
+   8    8  400  870 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  383  870 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c45
+   8    8  366  870 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c54
+   8    8  467  900 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  450  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  900 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  400  900 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  383  900 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c54
+   8    8  467  931 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  450  931 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  931 FO
+gr
+
+gs 248 179 455 801 rc
+c42
+   8    8  383  839 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c45
+   8    8  366  839 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c47
+   8    8  350  839 FO
+gr
+
+c47
+gs 248 179 455 801 rc
+c54
+   8    8  433  870 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  416  870 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  400  870 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c42
+   8    8  383  870 FO
+gr
+
+c42
+gs 248 179 455 801 rc
+c45
+   8    8  366  870 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c43
+   8    8  467  900 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+c54
+   8    8  450  900 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  433  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  900 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  400  900 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+   8    8  467  931 FO
+gr
+
+gs 248 179 455 801 rc
+c54
+   8    8  416  839 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+c43
+   8    8  400  839 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+   8    8  383  839 FO
+gr
+
+gs 248 179 455 801 rc
+c45
+   8    8  366  839 FO
+gr
+
+c45
+gs 248 179 455 801 rc
+c43
+   8    8  467  870 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+   8    8  450  870 FO
+gr
+
+gs 248 179 455 801 rc
+c54
+   8    8  433  870 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+   8    8  416  870 FO
+gr
+
+gs 248 179 455 801 rc
+c43
+   8    8  400  870 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+   8    8  383  870 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  900 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  900 FO
+gr
+
+gs 248 179 455 801 rc
+c54
+   8    8  433  900 FO
+gr
+
+c54
+gs 248 179 455 801 rc
+c43
+   8    8  467  839 FO
+gr
+
+c43
+gs 248 179 455 801 rc
+   8    8  450  839 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  839 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  839 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  839 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  839 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  870 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  870 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  870 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  870 FO
+gr
+
+gs 248 179 455 801 rc
+c19
+   8    8  333  839 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c18
+   8    8  316  839 FO
+gr
+
+c18
+gs 248 179 455 801 rc
+c19
+   8    8  333  870 FO
+gr
+
+c19
+gs 248 179 455 801 rc
+c17
+   8    8  333  839 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+   8    8  333  839 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  333  839 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c17
+   8    8  350  594 FO
+gr
+
+c17
+gs 248 179 455 801 rc
+   8    8  350  625 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  350  655 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  366  686 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  350  686 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  717 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  383  747 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+   8    8  366  747 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  350  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  416  778 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  400  778 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  383  778 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  366  778 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c35
+   8    8  467  808 FO
+gr
+
+c35
+gs 248 179 455 801 rc
+c37
+   8    8  450  808 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  433  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  416  808 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  400  808 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  383  808 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  366  594 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+   8    8  350  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  350  625 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  383  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+c33
+   8    8  366  655 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  350  655 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  383  686 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  366  686 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  350  686 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  400  717 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  383  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  366  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  747 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  747 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  383  747 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  366  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c37
+   8    8  467  778 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c38
+   8    8  450  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  433  778 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  416  778 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  400  778 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  383  778 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c35
+   8    8  467  808 FO
+gr
+
+c35
+gs 248 179 455 801 rc
+c37
+   8    8  450  808 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+   8    8  433  808 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  416  808 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c32
+   8    8  400  594 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+   8    8  383  594 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  366  594 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  400  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  416  655 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  400  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  383  655 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  366  655 FO
+gr
+
+gs 248 179 455 801 rc
+c32
+   8    8  433  686 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  416  686 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  400  686 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  383  686 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  467  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  717 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  433  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  416  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  717 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  717 FO
+gr
+
+gs 248 179 455 801 rc
+c38
+   8    8  467  747 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+c36
+   8    8  450  747 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  433  747 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  416  747 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  400  747 FO
+gr
+
+gs 248 179 455 801 rc
+c35
+   8    8  467  778 FO
+gr
+
+c35
+gs 248 179 455 801 rc
+c38
+   8    8  450  778 FO
+gr
+
+c38
+gs 248 179 455 801 rc
+   8    8  433  778 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  467  594 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  450  594 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  433  594 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  416  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  383  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  450  625 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  433  625 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  416  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  400  625 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  467  655 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  450  655 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  433  655 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  416  655 FO
+gr
+
+gs 248 179 455 801 rc
+c36
+   8    8  400  655 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  467  686 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  450  686 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c32
+   8    8  433  686 FO
+gr
+
+c32
+gs 248 179 455 801 rc
+c33
+   8    8  416  686 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c36
+   8    8  467  717 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  450  717 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  433  717 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+c37
+   8    8  467  747 FO
+gr
+
+c37
+gs 248 179 455 801 rc
+c36
+   8    8  467  594 FO
+gr
+
+c36
+gs 248 179 455 801 rc
+   8    8  450  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  433  594 FO
+gr
+
+gs 248 179 455 801 rc
+c33
+   8    8  467  625 FO
+gr
+
+c33
+gs 248 179 455 801 rc
+   8    8  450  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  467  655 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  333  594 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+   8    8  316  594 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  625 FO
+gr
+
+gs 248 179 455 801 rc
+   8    8  333  655 FO
+gr
+
+gs 248 179 455 801 rc
+c29
+   8    8  333  686 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+c28
+   8    8  333  594 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c20
+   8    8  467  839 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  450  839 FO
+gr
+
+gs 248 179 455 801 rc
+c28
+   8    8  433  839 FO
+gr
+
+c28
+gs 248 179 455 801 rc
+c29
+   8    8  416  839 FO
+gr
+
+c29
+gs 248 179 455 801 rc
+c20
+   8    8  467  870 FO
+gr
+
+c20
+gs 248 179 455 801 rc
+   8    8  467  839 FO
+gr
+
+gr
+
+c20
+0 sg
+ 451   70 mt 
+(Z<0) s
+ 435 1131 mt 
+(X \(R) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 22.2222 FMSR
+
+ 490 1144 mt 
+(E) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 27.7778 FMSR
+
+ 504 1131 mt 
+(\)) s
+ 137  619 mt  -90 rotate
+(Y \(R) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 22.2222 FMSR
+
+ 150  564 mt  -90 rotate
+(E) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 27.7778 FMSR
+
+ 137  550 mt  -90 rotate
+(\)) s
+90 rotate
+1 sg
+0 979 535 0 0 -979 913 1069 4 MP
+PP
+-535 0 0 979 535 0 0 -979 913 1069 5 MP stroke
+0.925926 w
+DO
+0 sg
+ 913 1069 mt  913   90 L
+ 913   90 mt  913   90 L
+1046 1069 mt 1046   90 L
+1046   90 mt 1046   90 L
+1180 1069 mt 1180   90 L
+1180   90 mt 1180   90 L
+1314 1069 mt 1314   90 L
+1314   90 mt 1314   90 L
+1448 1069 mt 1448   90 L
+1448   90 mt 1448   90 L
+ 913 1069 mt 1448 1069 L
+1448 1069 mt 1448 1069 L
+ 913  946 mt 1448  946 L
+1448  946 mt 1448  946 L
+ 913  824 mt 1448  824 L
+1448  824 mt 1448  824 L
+ 913  701 mt 1448  701 L
+1448  701 mt 1448  701 L
+ 913  579 mt 1448  579 L
+1448  579 mt 1448  579 L
+ 913  457 mt 1448  457 L
+1448  457 mt 1448  457 L
+ 913  334 mt 1448  334 L
+1448  334 mt 1448  334 L
+ 913  212 mt 1448  212 L
+1448  212 mt 1448  212 L
+ 913   90 mt 1448   90 L
+1448   90 mt 1448   90 L
+SO
+1.38889 w
+ 913 1069 mt 1448 1069 L
+ 913 1069 mt  913   90 L
+ 913 1069 mt  913 1059 L
+ 890 1102 mt 
+(-4) s
+1046 1069 mt 1046 1059 L
+1023 1102 mt 
+(-2) s
+1180 1069 mt 1180 1059 L
+1173 1102 mt 
+(0) s
+1314 1069 mt 1314 1059 L
+1307 1102 mt 
+(2) s
+1448 1069 mt 1448 1059 L
+1441 1102 mt 
+(4) s
+ 913 1069 mt  922 1069 L
+ 874 1079 mt 
+(-4) s
+ 913  946 mt  922  946 L
+ 874  956 mt 
+(-3) s
+ 913  824 mt  922  824 L
+ 874  834 mt 
+(-2) s
+ 913  701 mt  922  701 L
+ 874  711 mt 
+(-1) s
+ 913  579 mt  922  579 L
+ 890  589 mt 
+(0) s
+ 913  457 mt  922  457 L
+ 890  467 mt 
+(1) s
+ 913  334 mt  922  334 L
+ 890  344 mt 
+(2) s
+ 913  212 mt  922  212 L
+ 890  222 mt 
+(3) s
+ 913   90 mt  922   90 L
+ 890  100 mt 
+(4) s
+gs 913 90 536 980 rc
+0 j
+gs 953 179 455 801 rc
+c51
+   8    8 1188  319 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+   8    8 1188  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  319 FO
+gr
+
+gs 953 179 455 801 rc
+c40
+   8    8 1322  564 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+   8    8 1322  472 FO
+gr
+
+gs 953 179 455 801 rc
+c30
+   8    8 1322  503 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c31
+   8    8 1322  533 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1339  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  564 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1188  503 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1205  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  533 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1222  564 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c56
+   8    8 1205  564 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+   8    8 1188  564 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1188  411 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c56
+   8    8 1222  441 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c55
+   8    8 1205  441 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+   8    8 1188  441 FO
+gr
+
+gs 953 179 455 801 rc
+c40
+   8    8 1239  472 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c56
+   8    8 1222  472 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+   8    8 1205  472 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1188  472 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c40
+   8    8 1255  503 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+   8    8 1239  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  503 FO
+gr
+
+gs 953 179 455 801 rc
+c39
+   8    8 1255  533 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+   8    8 1239  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  533 FO
+gr
+
+gs 953 179 455 801 rc
+c30
+   8    8 1188  533 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1272  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  564 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1222  564 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+c57
+   8    8 1205  564 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1188  564 FO
+gr
+
+gs 953 179 455 801 rc
+c56
+   8    8 1222  380 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+   8    8 1205  380 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1188  380 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c40
+   8    8 1255  411 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+   8    8 1239  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  411 FO
+gr
+
+gs 953 179 455 801 rc
+c56
+   8    8 1188  411 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c30
+   8    8 1272  441 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c39
+   8    8 1255  441 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+   8    8 1239  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  441 FO
+gr
+
+gs 953 179 455 801 rc
+c40
+   8    8 1188  441 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c31
+   8    8 1272  472 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+c30
+   8    8 1255  472 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1239  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  472 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1289  503 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1272  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  533 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1272  533 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1255  533 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1289  564 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1272  564 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1255  564 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c40
+   8    8 1239  350 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+   8    8 1222  350 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  350 FO
+gr
+
+gs 953 179 455 801 rc
+c56
+   8    8 1188  350 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c39
+   8    8 1272  380 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+   8    8 1255  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  380 FO
+gr
+
+gs 953 179 455 801 rc
+c40
+   8    8 1188  380 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c30
+   8    8 1289  411 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c31
+   8    8 1272  411 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+c30
+   8    8 1255  411 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1239  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  411 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1289  441 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1272  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  441 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1305  472 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1289  472 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1272  472 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c13
+   8    8 1305  503 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1289  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  503 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1305  533 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1289  533 FO
+gr
+
+gs 953 179 455 801 rc
+c34
+   8    8 1305  564 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+c35
+   8    8 1289  564 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c39
+   8    8 1272  350 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+   8    8 1255  350 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  350 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  350 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  350 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  350 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1289  380 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1272  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  380 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1305  411 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+c41
+   8    8 1289  411 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1272  411 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1305  441 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1289  441 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1305  472 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1289  472 FO
+gr
+
+gs 953 179 455 801 rc
+c35
+   8    8 1305  503 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c37
+   8    8 1305  533 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c36
+   8    8 1305  564 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c46
+   8    8 1322  319 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c47
+   8    8 1322  319 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1322  319 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1322  288 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1339  319 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1322  319 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c46
+   8    8 1239  288 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c55
+   8    8 1222  288 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c39
+   8    8 1205  288 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+c30
+   8    8 1188  288 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c47
+   8    8 1272  319 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1255  319 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1239  319 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c40
+   8    8 1222  319 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c30
+   8    8 1205  319 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c31
+   8    8 1188  319 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+c48
+   8    8 1222  258 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c56
+   8    8 1205  258 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c39
+   8    8 1188  258 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+c44
+   8    8 1272  288 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1255  288 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1239  288 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c55
+   8    8 1222  288 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c40
+   8    8 1205  288 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c39
+   8    8 1188  288 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+c45
+   8    8 1289  319 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+   8    8 1272  319 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1255  319 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c48
+   8    8 1239  319 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c55
+   8    8 1188  227 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c43
+   8    8 1255  258 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c42
+   8    8 1239  258 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c47
+   8    8 1222  258 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c48
+   8    8 1205  258 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1188  258 FO
+gr
+
+gs 953 179 455 801 rc
+c43
+   8    8 1289  288 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1272  288 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c43
+   8    8 1255  288 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c45
+   8    8 1239  288 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1222  288 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c54
+   8    8 1305  319 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+   8    8 1289  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  319 FO
+gr
+
+gs 953 179 455 801 rc
+c43
+   8    8 1222  227 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c45
+   8    8 1205  227 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c44
+   8    8 1188  227 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c51
+   8    8 1272  258 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+   8    8 1255  258 FO
+gr
+
+gs 953 179 455 801 rc
+c53
+   8    8 1239  258 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c42
+   8    8 1222  258 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c45
+   8    8 1205  258 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1188  258 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c49
+   8    8 1289  288 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+   8    8 1272  288 FO
+gr
+
+gs 953 179 455 801 rc
+c52
+   8    8 1255  288 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c50
+   8    8 1305  319 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+   8    8 1289  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  227 FO
+gr
+
+gs 953 179 455 801 rc
+c52
+   8    8 1222  227 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c53
+   8    8 1205  227 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1188  227 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c58
+   8    8 1272  258 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c64
+   8    8 1255  258 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c51
+   8    8 1239  258 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c53
+   8    8 1222  258 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c63
+   8    8 1305  288 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1289  288 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1272  288 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c62
+   8    8 1305  319 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1289  319 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c52
+   8    8 1188  197 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c63
+   8    8 1255  227 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c64
+   8    8 1239  227 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c49
+   8    8 1222  227 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c52
+   8    8 1205  227 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c42
+   8    8 1188  227 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c61
+   8    8 1289  258 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c62
+   8    8 1272  258 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c59
+   8    8 1255  258 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c49
+   8    8 1239  258 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c61
+   8    8 1305  288 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c8
+   8    8 1289  288 FO
+gr
+
+c8
+gs 953 179 455 801 rc
+c58
+   8    8 1272  288 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c61
+   8    8 1305  319 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c50
+   8    8 1205  197 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c53
+   8    8 1188  197 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c63
+   8    8 1255  227 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c64
+   8    8 1239  227 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c50
+   8    8 1222  227 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c52
+   8    8 1205  227 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c45
+   8    8 1188  227 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c60
+   8    8 1289  258 FO
+gr
+
+c60
+gs 953 179 455 801 rc
+c62
+   8    8 1272  258 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c59
+   8    8 1255  258 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c60
+   8    8 1305  288 FO
+gr
+
+c60
+gs 953 179 455 801 rc
+c8
+   8    8 1289  288 FO
+gr
+
+c8
+gs 953 179 455 801 rc
+c61
+   8    8 1305  319 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c59
+   8    8 1222  197 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c50
+   8    8 1205  197 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c54
+   8    8 1188  197 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c61
+   8    8 1272  227 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c58
+   8    8 1255  227 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c64
+   8    8 1239  227 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c50
+   8    8 1222  227 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c54
+   8    8 1205  227 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c44
+   8    8 1188  227 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c61
+   8    8 1289  258 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c58
+   8    8 1272  258 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c64
+   8    8 1255  258 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c61
+   8    8 1305  288 FO
+gr
+
+c61
+gs 953 179 455 801 rc
+c63
+   8    8 1289  288 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1305  319 FO
+gr
+
+gs 953 179 455 801 rc
+c49
+   8    8 1322  411 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c52
+   8    8 1322  441 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c51
+   8    8 1339  472 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1322  472 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c52
+   8    8 1339  503 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c43
+   8    8 1322  503 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1339  533 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c43
+   8    8 1322  533 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+   8    8 1339  564 FO
+gr
+
+gs 953 179 455 801 rc
+c42
+   8    8 1322  564 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c49
+   8    8 1322  380 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+   8    8 1339  411 FO
+gr
+
+gs 953 179 455 801 rc
+c52
+   8    8 1322  411 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c51
+   8    8 1339  441 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1322  441 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1339  472 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1322  472 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c51
+   8    8 1356  503 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1339  503 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1356  533 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1339  533 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1356  564 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c42
+   8    8 1339  564 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c49
+   8    8 1322  350 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+   8    8 1339  380 FO
+gr
+
+gs 953 179 455 801 rc
+c52
+   8    8 1322  380 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c51
+   8    8 1339  411 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1322  411 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c49
+   8    8 1356  441 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c53
+   8    8 1339  441 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c51
+   8    8 1356  472 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1339  472 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1356  503 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1339  503 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+   8    8 1356  533 FO
+gr
+
+gs 953 179 455 801 rc
+c53
+   8    8 1372  564 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1356  564 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c52
+   8    8 1322  350 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c51
+   8    8 1339  380 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c53
+   8    8 1322  380 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c49
+   8    8 1356  411 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c53
+   8    8 1339  411 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c51
+   8    8 1356  441 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1339  441 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1356  472 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c52
+   8    8 1372  503 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c43
+   8    8 1356  503 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c53
+   8    8 1372  533 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c42
+   8    8 1356  533 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c43
+   8    8 1372  564 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c45
+   8    8 1356  564 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c49
+   8    8 1339  350 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c53
+   8    8 1322  350 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c52
+   8    8 1339  380 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c54
+   8    8 1322  380 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c51
+   8    8 1356  411 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1339  411 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1356  441 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c51
+   8    8 1372  472 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c43
+   8    8 1356  472 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c53
+   8    8 1372  503 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c42
+   8    8 1356  503 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c43
+   8    8 1372  533 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c42
+   8    8 1372  564 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c52
+   8    8 1339  350 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c54
+   8    8 1322  350 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c51
+   8    8 1356  380 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1339  380 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1356  411 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1339  411 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c51
+   8    8 1372  441 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c54
+   8    8 1356  441 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1372  472 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1356  472 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1372  503 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c43
+   8    8 1372  533 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1389  564 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c45
+   8    8 1372  564 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c53
+   8    8 1339  350 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1322  350 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c52
+   8    8 1356  380 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c54
+   8    8 1339  380 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+   8    8 1356  411 FO
+gr
+
+gs 953 179 455 801 rc
+c53
+   8    8 1372  441 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1356  441 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1372  472 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c43
+   8    8 1372  503 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c53
+   8    8 1389  533 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c45
+   8    8 1372  533 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c54
+   8    8 1389  564 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c47
+   8    8 1372  564 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c54
+   8    8 1339  350 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c42
+   8    8 1322  350 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c53
+   8    8 1356  380 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c43
+   8    8 1339  380 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c52
+   8    8 1372  411 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c54
+   8    8 1356  411 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1372  441 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c42
+   8    8 1356  441 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c54
+   8    8 1372  472 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c53
+   8    8 1389  503 FO
+gr
+
+c53
+gs 953 179 455 801 rc
+c42
+   8    8 1372  503 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c54
+   8    8 1389  533 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c46
+   8    8 1372  533 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c42
+   8    8 1389  564 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c56
+   8    8 1372  564 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c21
+   8    8 1289  350 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c28
+   8    8 1272  350 FO
+gr
+
+c28
+gs 953 179 455 801 rc
+c20
+   8    8 1255  350 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+c27
+   8    8 1305  380 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+c29
+   8    8 1289  380 FO
+gr
+
+c29
+gs 953 179 455 801 rc
+c20
+   8    8 1272  380 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+c21
+   8    8 1305  411 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c20
+   8    8 1289  411 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+c29
+   8    8 1305  441 FO
+gr
+
+c29
+gs 953 179 455 801 rc
+   8    8 1305  350 FO
+gr
+
+gs 953 179 455 801 rc
+c20
+   8    8 1289  350 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+c15
+   8    8 1272  350 FO
+gr
+
+c15
+gs 953 179 455 801 rc
+c20
+   8    8 1305  380 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+c15
+   8    8 1289  380 FO
+gr
+
+c15
+gs 953 179 455 801 rc
+c16
+   8    8 1305  411 FO
+gr
+
+c16
+gs 953 179 455 801 rc
+c15
+   8    8 1305  350 FO
+gr
+
+c15
+gs 953 179 455 801 rc
+   8    8 1289  350 FO
+gr
+
+gs 953 179 455 801 rc
+c25
+   8    8 1305  380 FO
+gr
+
+c25
+gs 953 179 455 801 rc
+c24
+   8    8 1305  350 FO
+gr
+
+c24
+gs 953 179 455 801 rc
+c65
+   8    8 1172  319 FO
+gr
+
+c65
+gs 953 179 455 801 rc
+c63
+   8    8 1172  288 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c59
+   8    8 1172  319 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1155  319 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c63
+   8    8 1138  319 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1121  319 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1172  503 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1172  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  533 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1172  564 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1155  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  564 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1172  411 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1172  441 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1155  441 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1138  441 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1172  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  472 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1121  472 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1172  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  533 FO
+gr
+
+gs 953 179 455 801 rc
+c64
+   8    8 1105  533 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c58
+   8    8 1172  564 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1155  564 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1138  564 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1121  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  564 FO
+gr
+
+gs 953 179 455 801 rc
+c64
+   8    8 1088  564 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c8
+   8    8 1172  380 FO
+gr
+
+c8
+gs 953 179 455 801 rc
+c62
+   8    8 1155  380 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c58
+   8    8 1138  380 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c8
+   8    8 1172  411 FO
+gr
+
+c8
+gs 953 179 455 801 rc
+c62
+   8    8 1155  411 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1138  411 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c58
+   8    8 1121  411 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1105  411 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1172  441 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1155  441 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1138  441 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1121  441 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1105  441 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1088  441 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1138  472 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1121  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  472 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1088  472 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1121  503 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1105  503 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1088  503 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1071  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  533 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1105  564 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1088  564 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1071  564 FO
+gr
+
+gs 953 179 455 801 rc
+c63
+   8    8 1172  350 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c58
+   8    8 1155  350 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c64
+   8    8 1138  350 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c50
+   8    8 1121  350 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c8
+   8    8 1172  380 FO
+gr
+
+c8
+gs 953 179 455 801 rc
+c63
+   8    8 1155  380 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c58
+   8    8 1138  380 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c64
+   8    8 1121  380 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c50
+   8    8 1105  380 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c49
+   8    8 1088  380 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c63
+   8    8 1138  411 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c58
+   8    8 1121  411 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1105  411 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1088  411 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c50
+   8    8 1071  411 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c58
+   8    8 1105  441 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1088  441 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1071  441 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c58
+   8    8 1088  472 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1071  472 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1055  472 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1088  503 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1071  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  533 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  350 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1155  350 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c50
+   8    8 1138  350 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c49
+   8    8 1121  350 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c51
+   8    8 1105  350 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c52
+   8    8 1088  350 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c50
+   8    8 1121  380 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c49
+   8    8 1105  380 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c51
+   8    8 1088  380 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c52
+   8    8 1071  380 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c49
+   8    8 1088  411 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c51
+   8    8 1071  411 FO
+gr
+
+c51
+gs 953 179 455 801 rc
+c52
+   8    8 1055  411 FO
+gr
+
+c52
+gs 953 179 455 801 rc
+c50
+   8    8 1071  441 FO
+gr
+
+c50
+gs 953 179 455 801 rc
+c49
+   8    8 1055  441 FO
+gr
+
+c49
+gs 953 179 455 801 rc
+c59
+   8    8 1071  472 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1055  472 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c59
+   8    8 1055  503 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1055  533 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c63
+   8    8 1055  564 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c57
+   8    8 1038  564 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+c39
+   8    8 1038  472 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+   8    8 1038  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  533 FO
+gr
+
+gs 953 179 455 801 rc
+c30
+   8    8 1038  564 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1021  564 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1172  288 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1155  288 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1138  288 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1121  288 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1172  319 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1155  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  319 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1121  319 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1105  319 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1088  319 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+c14
+   8    8 1172  258 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1155  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  258 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1172  288 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1155  288 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1138  288 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1121  288 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1105  288 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1088  288 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1121  319 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c41
+   8    8 1105  319 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1088  319 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1071  319 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+c41
+   8    8 1172  227 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+c14
+   8    8 1172  258 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1155  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  258 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1121  258 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1105  258 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1138  288 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1121  288 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1105  288 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1088  288 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1071  288 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+c41
+   8    8 1088  319 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+c57
+   8    8 1071  319 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1055  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  227 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1172  258 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1155  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  258 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1105  258 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1088  258 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1105  288 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1088  288 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1071  288 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1071  319 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  319 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1172  227 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1155  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  258 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1088  258 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1088  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  319 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1055  319 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1172  197 FO
+gr
+
+gs 953 179 455 801 rc
+c30
+   8    8 1172  227 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1155  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  227 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1121  227 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1105  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  258 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1088  258 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1071  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  288 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  319 FO
+gr
+
+gs 953 179 455 801 rc
+c30
+   8    8 1172  197 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1155  197 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  227 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1138  227 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1121  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  227 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1105  258 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1088  258 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  258 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1071  288 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1055  288 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1055  319 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c30
+   8    8 1172  197 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+   8    8 1155  197 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  197 FO
+gr
+
+gs 953 179 455 801 rc
+c31
+   8    8 1172  227 FO
+gr
+
+c31
+gs 953 179 455 801 rc
+   8    8 1155  227 FO
+gr
+
+gs 953 179 455 801 rc
+c57
+   8    8 1138  227 FO
+gr
+
+c57
+gs 953 179 455 801 rc
+   8    8 1121  227 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  227 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1088  227 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+c14
+   8    8 1105  258 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1088  258 FO
+gr
+
+gs 953 179 455 801 rc
+c41
+   8    8 1071  258 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+c13
+   8    8 1071  288 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c14
+   8    8 1055  288 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c34
+   8    8 1055  319 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+c26
+   8    8 1038  319 FO
+gr
+
+c26
+gs 953 179 455 801 rc
+   8    8 1038  319 FO
+gr
+
+gs 953 179 455 801 rc
+/c67 { 0.000000 0.000000 0.625000 sr} bdef
+c67
+   8    8 1038  319 FO
+gr
+
+c67
+gs 953 179 455 801 rc
+c9
+   8    8 1038  288 FO
+gr
+
+c9
+gs 953 179 455 801 rc
+   8    8 1038  319 FO
+gr
+
+gs 953 179 455 801 rc
+/c68 { 0.000000 0.000000 0.750000 sr} bdef
+c68
+   8    8 1021  319 FO
+gr
+
+c68
+gs 953 179 455 801 rc
+c32
+   8    8 1105  350 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+   8    8 1088  350 FO
+gr
+
+gs 953 179 455 801 rc
+c33
+   8    8 1071  350 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+   8    8 1088  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  380 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1055  380 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+   8    8 1071  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  441 FO
+gr
+
+gs 953 179 455 801 rc
+c32
+   8    8 1088  350 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+c33
+   8    8 1071  350 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+   8    8 1055  350 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1071  380 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+   8    8 1055  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  411 FO
+gr
+
+gs 953 179 455 801 rc
+c33
+   8    8 1071  350 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+c36
+   8    8 1055  350 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+   8    8 1055  380 FO
+gr
+
+gs 953 179 455 801 rc
+c33
+   8    8 1055  350 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+c32
+   8    8 1038  411 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+   8    8 1038  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  472 FO
+gr
+
+gs 953 179 455 801 rc
+c33
+   8    8 1021  472 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+   8    8 1038  503 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1021  503 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c37
+   8    8 1038  533 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c35
+   8    8 1021  533 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c34
+   8    8 1038  564 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+   8    8 1021  564 FO
+gr
+
+gs 953 179 455 801 rc
+c33
+   8    8 1038  380 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+   8    8 1038  411 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1021  411 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c33
+   8    8 1038  441 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+   8    8 1021  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  472 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1021  472 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c38
+   8    8 1021  503 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+   8    8 1004  503 FO
+gr
+
+gs 953 179 455 801 rc
+c35
+   8    8 1021  533 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+   8    8 1004  533 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8 1021  564 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+   8    8 1004  564 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  350 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1038  380 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c38
+   8    8 1021  380 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c36
+   8    8 1038  411 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+   8    8 1021  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  472 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8 1021  503 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+   8    8 1004  503 FO
+gr
+
+gs 953 179 455 801 rc
+c37
+   8    8 1004  533 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c17
+   8    8 1004  564 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8  988  564 FO
+gr
+
+gs 953 179 455 801 rc
+c37
+   8    8 1038  350 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+   8    8 1038  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  380 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8 1021  411 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c37
+   8    8 1004  411 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c38
+   8    8 1021  441 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+   8    8 1004  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  503 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  503 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1004  533 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c38
+   8    8  988  533 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c19
+   8    8 1004  564 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8  988  564 FO
+gr
+
+gs 953 179 455 801 rc
+c37
+   8    8 1038  350 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c35
+   8    8 1021  350 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+   8    8 1038  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  380 FO
+gr
+
+gs 953 179 455 801 rc
+c37
+   8    8 1021  411 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c35
+   8    8 1004  411 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c37
+   8    8 1004  441 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+   8    8 1004  472 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  472 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8 1004  503 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c37
+   8    8  988  503 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c36
+   8    8  988  533 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c19
+   8    8  988  564 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+c35
+   8    8 1038  350 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c34
+   8    8 1021  350 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+   8    8 1021  380 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1004  380 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c34
+   8    8 1021  411 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+   8    8 1004  411 FO
+gr
+
+gs 953 179 455 801 rc
+c35
+   8    8 1004  441 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c34
+   8    8  988  441 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+c35
+   8    8 1004  472 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+   8    8  988  472 FO
+gr
+
+gs 953 179 455 801 rc
+c37
+   8    8  988  503 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c36
+   8    8  988  533 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c19
+   8    8  988  564 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+c17
+   8    8  971  564 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+c66
+   8    8 1038  350 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1021  350 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1021  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  380 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1004  411 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1004  441 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  441 FO
+gr
+
+gs 953 179 455 801 rc
+c35
+   8    8  988  472 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c37
+   8    8  988  503 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c36
+   8    8  988  533 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c38
+   8    8  971  533 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c32
+   8    8  988  564 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+   8    8  971  564 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1038  350 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c14
+   8    8 1021  350 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1021  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  380 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  411 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  411 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1004  441 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8  988  441 FO
+gr
+
+gs 953 179 455 801 rc
+c34
+   8    8  988  472 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+c35
+   8    8  988  503 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+   8    8  971  503 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8  988  533 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c37
+   8    8  971  533 FO
+gr
+
+c37
+gs 953 179 455 801 rc
+c33
+   8    8  988  564 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+c36
+   8    8  971  564 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c48
+   8    8 1322  594 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1339  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  686 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1222  594 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1205  594 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1188  594 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c47
+   8    8 1205  625 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c44
+   8    8 1188  625 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1188  655 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1272  594 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1255  594 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1239  594 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  594 FO
+gr
+
+gs 953 179 455 801 rc
+c42
+   8    8 1188  594 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c47
+   8    8 1255  625 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c44
+   8    8 1239  625 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  625 FO
+gr
+
+gs 953 179 455 801 rc
+c45
+   8    8 1188  625 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1255  655 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c44
+   8    8 1239  655 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  655 FO
+gr
+
+gs 953 179 455 801 rc
+c45
+   8    8 1188  655 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1239  686 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c44
+   8    8 1222  686 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1205  686 FO
+gr
+
+gs 953 179 455 801 rc
+c45
+   8    8 1188  686 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1222  717 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1205  717 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1188  717 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1188  747 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1289  594 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1272  594 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1255  594 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c47
+   8    8 1289  625 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1272  625 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1255  625 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c47
+   8    8 1289  655 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1272  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  655 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1239  655 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c47
+   8    8 1272  686 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1255  686 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1239  686 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  686 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1272  717 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1255  717 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1239  717 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  717 FO
+gr
+
+gs 953 179 455 801 rc
+c45
+   8    8 1188  717 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1255  747 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1239  747 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1222  747 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1205  747 FO
+gr
+
+gs 953 179 455 801 rc
+c45
+   8    8 1188  747 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1222  778 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1205  778 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1188  778 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c47
+   8    8 1305  594 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1289  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  717 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1255  717 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c47
+   8    8 1289  747 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1272  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  747 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1239  747 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  747 FO
+gr
+
+gs 953 179 455 801 rc
+c46
+   8    8 1272  778 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c47
+   8    8 1255  778 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1239  778 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1222  778 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1205  778 FO
+gr
+
+gs 953 179 455 801 rc
+c45
+   8    8 1188  778 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1239  808 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1222  808 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1205  808 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c45
+   8    8 1188  808 FO
+gr
+
+c45
+gs 953 179 455 801 rc
+c47
+   8    8 1305  594 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+   8    8 1305  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  778 FO
+gr
+
+gs 953 179 455 801 rc
+c44
+   8    8 1239  778 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+c46
+   8    8 1272  808 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c47
+   8    8 1255  808 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c44
+   8    8 1239  808 FO
+gr
+
+c44
+gs 953 179 455 801 rc
+   8    8 1222  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  808 FO
+gr
+
+gs 953 179 455 801 rc
+c42
+   8    8 1188  808 FO
+gr
+
+c42
+gs 953 179 455 801 rc
+c54
+   8    8 1188  839 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+c43
+   8    8 1239  839 FO
+gr
+
+c43
+gs 953 179 455 801 rc
+c54
+   8    8 1222  839 FO
+gr
+
+c54
+gs 953 179 455 801 rc
+   8    8 1205  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  870 FO
+gr
+
+gs 953 179 455 801 rc
+c63
+   8    8 1339  594 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1322  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  655 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1339  686 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1322  686 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1322  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  625 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1356  655 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1339  655 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1339  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  686 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1339  717 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1322  717 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c62
+   8    8 1339  747 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1322  747 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1322  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  686 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1356  717 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1339  717 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1339  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  747 FO
+gr
+
+gs 953 179 455 801 rc
+c62
+   8    8 1339  778 FO
+gr
+
+c62
+gs 953 179 455 801 rc
+c63
+   8    8 1322  778 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1322  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  778 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1322  778 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1322  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  594 FO
+gr
+
+gs 953 179 455 801 rc
+c63
+   8    8 1372  625 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1372  655 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1356  655 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c63
+   8    8 1372  686 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+   8    8 1356  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  747 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1339  747 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1339  778 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1322  778 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1339  808 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1322  808 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1389  594 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1372  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  686 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1356  686 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c63
+   8    8 1372  717 FO
+gr
+
+c63
+gs 953 179 455 801 rc
+c58
+   8    8 1356  717 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+   8    8 1356  747 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1339  747 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1356  778 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1339  778 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1339  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  808 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1389  594 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1372  594 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c58
+   8    8 1389  625 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1372  625 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1372  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  686 FO
+gr
+
+gs 953 179 455 801 rc
+c58
+   8    8 1372  717 FO
+gr
+
+c58
+gs 953 179 455 801 rc
+c59
+   8    8 1356  717 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+   8    8 1356  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1339  808 FO
+gr
+
+gs 953 179 455 801 rc
+c64
+   8    8 1322  808 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c59
+   8    8 1389  594 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1372  594 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c59
+   8    8 1389  625 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1372  625 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c59
+   8    8 1389  655 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1372  655 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+   8    8 1372  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1372  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1356  717 FO
+gr
+
+gs 953 179 455 801 rc
+c59
+   8    8 1372  747 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1356  747 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+c59
+   8    8 1356  778 FO
+gr
+
+c59
+gs 953 179 455 801 rc
+c64
+   8    8 1339  778 FO
+gr
+
+c64
+gs 953 179 455 801 rc
+   8    8 1339  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1322  808 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1305  717 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+   8    8 1305  747 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8 1289  747 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c36
+   8    8 1305  778 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c38
+   8    8 1289  778 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c36
+   8    8 1272  778 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+   8    8 1289  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  808 FO
+gr
+
+gs 953 179 455 801 rc
+c20
+   8    8 1322  839 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+   8    8 1322  839 FO
+gr
+
+gs 953 179 455 801 rc
+c16
+   8    8 1322  839 FO
+gr
+
+c16
+gs 953 179 455 801 rc
+c20
+   8    8 1339  839 FO
+gr
+
+c20
+gs 953 179 455 801 rc
+c16
+   8    8 1322  839 FO
+gr
+
+c16
+gs 953 179 455 801 rc
+   8    8 1322  870 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1272  839 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+   8    8 1255  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  839 FO
+gr
+
+gs 953 179 455 801 rc
+c21
+   8    8 1272  870 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c22
+   8    8 1255  870 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+   8    8 1239  870 FO
+gr
+
+gs 953 179 455 801 rc
+c27
+   8    8 1222  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1205  870 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1188  870 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1222  900 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1205  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  900 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1305  839 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+   8    8 1289  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  839 FO
+gr
+
+gs 953 179 455 801 rc
+c21
+   8    8 1289  870 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c22
+   8    8 1272  870 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+   8    8 1255  870 FO
+gr
+
+gs 953 179 455 801 rc
+c27
+   8    8 1239  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1222  870 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1255  900 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1239  900 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1222  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  931 FO
+gr
+
+gs 953 179 455 801 rc
+c21
+   8    8 1305  839 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c22
+   8    8 1289  839 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c21
+   8    8 1289  870 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c22
+   8    8 1272  870 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1255  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+c22
+   8    8 1272  900 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1255  900 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1239  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  931 FO
+gr
+
+gs 953 179 455 801 rc
+c21
+   8    8 1305  839 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c22
+   8    8 1289  839 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c21
+   8    8 1305  870 FO
+gr
+
+c21
+gs 953 179 455 801 rc
+c22
+   8    8 1289  870 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1272  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1272  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  931 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1305  839 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+   8    8 1305  870 FO
+gr
+
+gs 953 179 455 801 rc
+c27
+   8    8 1289  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1272  870 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1289  900 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1272  900 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1255  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  961 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  839 FO
+gr
+
+gs 953 179 455 801 rc
+c22
+   8    8 1305  870 FO
+gr
+
+c22
+gs 953 179 455 801 rc
+c27
+   8    8 1289  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1289  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  961 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  961 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1305  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1289  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1272  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1255  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1239  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1222  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1205  931 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1188  931 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+c27
+   8    8 1222  961 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1205  961 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1188  961 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1172  594 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1155  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  594 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  625 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  625 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1172  655 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c41
+   8    8 1172  594 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+   8    8 1155  594 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1138  594 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1121  594 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1105  594 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1088  594 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1172  625 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c41
+   8    8 1155  625 FO
+gr
+
+c41
+gs 953 179 455 801 rc
+c14
+   8    8 1138  625 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1121  625 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1105  625 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c14
+   8    8 1172  655 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1155  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  655 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1105  655 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c14
+   8    8 1172  686 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1155  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  686 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1172  717 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1155  717 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1138  717 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c66
+   8    8 1172  747 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1105  594 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1088  594 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1071  594 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1105  625 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1088  625 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1071  625 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c14
+   8    8 1121  655 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1105  655 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1088  655 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c66
+   8    8 1071  655 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c14
+   8    8 1138  686 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1121  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  686 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1088  686 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1172  717 FO
+gr
+
+gs 953 179 455 801 rc
+c14
+   8    8 1155  717 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+   8    8 1138  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  717 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1105  717 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1088  717 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1172  747 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1155  747 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1138  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  747 FO
+gr
+
+gs 953 179 455 801 rc
+c34
+   8    8 1172  778 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+c66
+   8    8 1155  778 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1138  778 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1071  594 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c66
+   8    8 1055  594 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1071  625 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c66
+   8    8 1055  625 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1088  655 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1071  655 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1055  655 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1088  686 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1071  686 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1055  686 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c14
+   8    8 1105  717 FO
+gr
+
+c14
+gs 953 179 455 801 rc
+c13
+   8    8 1088  717 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1071  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  747 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1172  778 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1155  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  778 FO
+gr
+
+gs 953 179 455 801 rc
+c13
+   8    8 1105  778 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c66
+   8    8 1088  778 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c35
+   8    8 1172  808 FO
+gr
+
+c35
+gs 953 179 455 801 rc
+c34
+   8    8 1155  808 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+   8    8 1138  808 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1121  808 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1055  594 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1055  625 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1055  655 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1071  686 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c66
+   8    8 1055  686 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1071  717 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+c66
+   8    8 1055  717 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+c13
+   8    8 1088  747 FO
+gr
+
+c13
+gs 953 179 455 801 rc
+   8    8 1071  747 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1055  747 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1121  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  778 FO
+gr
+
+gs 953 179 455 801 rc
+c34
+   8    8 1172  808 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+   8    8 1155  808 FO
+gr
+
+gs 953 179 455 801 rc
+c66
+   8    8 1138  808 FO
+gr
+
+c66
+gs 953 179 455 801 rc
+   8    8 1121  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  808 FO
+gr
+
+gs 953 179 455 801 rc
+c34
+   8    8 1088  808 FO
+gr
+
+c34
+gs 953 179 455 801 rc
+/c69 { 0.000000 0.000000 0.812500 sr} bdef
+c69
+   8    8 1038  594 FO
+gr
+
+c69
+gs 953 179 455 801 rc
+c9
+   8    8 1038  594 FO
+gr
+
+c9
+gs 953 179 455 801 rc
+   8    8 1021  594 FO
+gr
+
+gs 953 179 455 801 rc
+c69
+   8    8 1038  625 FO
+gr
+
+c69
+gs 953 179 455 801 rc
+c68
+   8    8 1038  655 FO
+gr
+
+c68
+gs 953 179 455 801 rc
+/c70 { 0.000000 0.000000 0.687500 sr} bdef
+c70
+   8    8 1038  686 FO
+gr
+
+c70
+gs 953 179 455 801 rc
+c67
+   8    8 1172  839 FO
+gr
+
+c67
+gs 953 179 455 801 rc
+c26
+   8    8 1172  839 FO
+gr
+
+c26
+gs 953 179 455 801 rc
+c67
+   8    8 1155  839 FO
+gr
+
+c67
+gs 953 179 455 801 rc
+   8    8 1138  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  839 FO
+gr
+
+gs 953 179 455 801 rc
+c26
+   8    8 1172  870 FO
+gr
+
+c26
+gs 953 179 455 801 rc
+c12
+   8    8 1055  717 FO
+gr
+
+c12
+gs 953 179 455 801 rc
+   8    8 1071  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  747 FO
+gr
+
+gs 953 179 455 801 rc
+c24
+   8    8 1088  778 FO
+gr
+
+c24
+gs 953 179 455 801 rc
+c23
+   8    8 1071  778 FO
+gr
+
+c23
+gs 953 179 455 801 rc
+   8    8 1055  778 FO
+gr
+
+gs 953 179 455 801 rc
+c25
+   8    8 1105  808 FO
+gr
+
+c25
+gs 953 179 455 801 rc
+   8    8 1088  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  808 FO
+gr
+
+gs 953 179 455 801 rc
+c12
+   8    8 1055  747 FO
+gr
+
+c12
+gs 953 179 455 801 rc
+c23
+   8    8 1071  778 FO
+gr
+
+c23
+gs 953 179 455 801 rc
+   8    8 1055  778 FO
+gr
+
+gs 953 179 455 801 rc
+c25
+   8    8 1088  808 FO
+gr
+
+c25
+gs 953 179 455 801 rc
+c24
+   8    8 1071  808 FO
+gr
+
+c24
+gs 953 179 455 801 rc
+   8    8 1055  808 FO
+gr
+
+gs 953 179 455 801 rc
+c12
+   8    8 1055  778 FO
+gr
+
+c12
+gs 953 179 455 801 rc
+c24
+   8    8 1071  808 FO
+gr
+
+c24
+gs 953 179 455 801 rc
+c23
+   8    8 1055  808 FO
+gr
+
+c23
+gs 953 179 455 801 rc
+   8    8 1055  808 FO
+gr
+
+gs 953 179 455 801 rc
+c56
+   8    8 1038  594 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c55
+   8    8 1021  594 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c56
+   8    8 1038  625 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+   8    8 1021  625 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1038  655 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c56
+   8    8 1021  655 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+   8    8 1038  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  747 FO
+gr
+
+gs 953 179 455 801 rc
+c46
+   8    8 1021  594 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+   8    8 1004  594 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1021  625 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c48
+   8    8 1004  625 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c55
+   8    8 1021  655 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+   8    8 1004  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  717 FO
+gr
+
+gs 953 179 455 801 rc
+c56
+   8    8 1038  747 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c55
+   8    8 1021  747 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c56
+   8    8 1038  778 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c46
+   8    8 1004  594 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c48
+   8    8  988  594 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c46
+   8    8 1004  625 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c48
+   8    8 1021  655 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1004  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  686 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1004  686 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c48
+   8    8 1021  717 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1004  717 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1038  747 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+   8    8 1021  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  808 FO
+gr
+
+gs 953 179 455 801 rc
+c47
+   8    8 1004  594 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c48
+   8    8  988  594 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c47
+   8    8 1004  625 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c46
+   8    8  988  625 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+   8    8 1004  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  655 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1004  686 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1021  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  747 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1038  778 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+   8    8 1021  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  594 FO
+gr
+
+gs 953 179 455 801 rc
+c46
+   8    8  988  625 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+   8    8 1004  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  655 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  686 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1004  717 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1021  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  778 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1038  808 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+   8    8 1021  808 FO
+gr
+
+gs 953 179 455 801 rc
+c56
+   8    8  988  594 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c39
+   8    8  971  594 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+c48
+   8    8  988  625 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c47
+   8    8  988  655 FO
+gr
+
+c47
+gs 953 179 455 801 rc
+c46
+   8    8 1004  686 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+   8    8  988  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  717 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1021  747 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c46
+   8    8 1004  747 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+c48
+   8    8 1021  778 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1004  778 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1038  808 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c48
+   8    8 1021  808 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c40
+   8    8  988  594 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c30
+   8    8  971  594 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c55
+   8    8  988  625 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c40
+   8    8  971  625 FO
+gr
+
+c40
+gs 953 179 455 801 rc
+c46
+   8    8  988  655 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+   8    8  988  686 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  747 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1021  778 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1004  778 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  808 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1021  808 FO
+gr
+
+gs 953 179 455 801 rc
+c39
+   8    8  988  594 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+c30
+   8    8  971  594 FO
+gr
+
+c30
+gs 953 179 455 801 rc
+c56
+   8    8  988  625 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c39
+   8    8  971  625 FO
+gr
+
+c39
+gs 953 179 455 801 rc
+c48
+   8    8  988  655 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c56
+   8    8  971  655 FO
+gr
+
+c56
+gs 953 179 455 801 rc
+c46
+   8    8  988  686 FO
+gr
+
+c46
+gs 953 179 455 801 rc
+   8    8 1004  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  717 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1004  747 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8  988  747 FO
+gr
+
+gs 953 179 455 801 rc
+c48
+   8    8 1021  778 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+   8    8 1004  778 FO
+gr
+
+gs 953 179 455 801 rc
+c55
+   8    8 1038  808 FO
+gr
+
+c55
+gs 953 179 455 801 rc
+c48
+   8    8 1021  808 FO
+gr
+
+c48
+gs 953 179 455 801 rc
+c27
+   8    8 1172  839 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1155  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  839 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1105  839 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+   8    8 1088  839 FO
+gr
+
+gs 953 179 455 801 rc
+c27
+   8    8 1172  870 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1155  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  870 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1121  839 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1105  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  839 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1172  870 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+   8    8 1155  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  870 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1105  870 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1088  870 FO
+gr
+
+gs 953 179 455 801 rc
+c27
+   8    8 1172  900 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+   8    8 1155  900 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1138  900 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+c17
+   8    8 1088  839 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+c32
+   8    8 1071  839 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+   8    8 1055  839 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1138  870 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1121  870 FO
+gr
+
+gs 953 179 455 801 rc
+c17
+   8    8 1105  870 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1088  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  870 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1172  900 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+c19
+   8    8 1155  900 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1138  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  900 FO
+gr
+
+gs 953 179 455 801 rc
+c27
+   8    8 1172  931 FO
+gr
+
+c27
+gs 953 179 455 801 rc
+c32
+   8    8 1071  839 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+   8    8 1055  839 FO
+gr
+
+gs 953 179 455 801 rc
+c17
+   8    8 1105  870 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1088  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  870 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1172  900 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1155  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  900 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1172  931 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+   8    8 1155  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  931 FO
+gr
+
+gs 953 179 455 801 rc
+c32
+   8    8 1071  839 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+   8    8 1055  839 FO
+gr
+
+gs 953 179 455 801 rc
+c17
+   8    8 1088  870 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1071  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  900 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1121  900 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1105  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  931 FO
+gr
+
+gs 953 179 455 801 rc
+c32
+   8    8 1055  839 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+c17
+   8    8 1088  870 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1071  870 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1055  870 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1121  900 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1105  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1088  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1155  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1121  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1105  931 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1172  961 FO
+gr
+
+gs 953 179 455 801 rc
+c33
+   8    8 1055  839 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+c17
+   8    8 1071  870 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1055  870 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1105  900 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1088  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  900 FO
+gr
+
+gs 953 179 455 801 rc
+c17
+   8    8 1172  931 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1155  931 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1138  931 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1121  931 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1105  931 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+c19
+   8    8 1172  961 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1155  961 FO
+gr
+
+gs 953 179 455 801 rc
+c38
+   8    8 1055  839 FO
+gr
+
+c38
+gs 953 179 455 801 rc
+c19
+   8    8 1071  870 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+c17
+   8    8 1055  870 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+c19
+   8    8 1105  900 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1088  900 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1071  900 FO
+gr
+
+gs 953 179 455 801 rc
+c17
+   8    8 1172  931 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1155  931 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1138  931 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1121  931 FO
+gr
+
+gs 953 179 455 801 rc
+c18
+   8    8 1105  931 FO
+gr
+
+c18
+gs 953 179 455 801 rc
+   8    8 1088  931 FO
+gr
+
+gs 953 179 455 801 rc
+c19
+   8    8 1172  961 FO
+gr
+
+c19
+gs 953 179 455 801 rc
+   8    8 1155  961 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1138  961 FO
+gr
+
+gs 953 179 455 801 rc
+c36
+   8    8 1038  839 FO
+gr
+
+c36
+gs 953 179 455 801 rc
+c33
+   8    8 1038  839 FO
+gr
+
+c33
+gs 953 179 455 801 rc
+c32
+   8    8 1038  839 FO
+gr
+
+c32
+gs 953 179 455 801 rc
+c17
+   8    8 1038  839 FO
+gr
+
+c17
+gs 953 179 455 801 rc
+   8    8 1021  839 FO
+gr
+
+gs 953 179 455 801 rc
+   8    8 1038  870 FO
+gr
+
+gr
+
+c17
+0 sg
+1156   70 mt 
+(Z>0) s
+1140 1131 mt 
+(X \(R) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 22.2222 FMSR
+
+1195 1144 mt 
+(E) s
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 27.7778 FMSR
+
+1209 1131 mt 
+(\)) s
+ 842  619 mt  -90 rotate
+(Y \(R) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 22.2222 FMSR
+
+ 855  564 mt  -90 rotate
+(E) s
+90 rotate
+%%IncludeResource: font Helvetica
+/Helvetica /ISOLatin1Encoding 27.7778 FMSR
+
+ 842  550 mt  -90 rotate
+(\)) s
+90 rotate
+
+end %%Color Dict
+
+eplot
+%%EndObject
+
+epage
+end
+
+showpage
+
+%%Trailer
+%%EOF

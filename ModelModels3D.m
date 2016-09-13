@@ -1,10 +1,16 @@
-function ModelModels3D(varnum)
+function ModelModels3D(modelnum,inputnum)
 if(nargin<1)
-    varnum=9; %Default to B_z
+    modelnum=7; %Default to ux
+end
+if(nargin<2)
+    inputnum=[8:15]; 
 end
 
 %Define what run you want to use
 runname='Victoir_Veibell_041316_1';
+
+
+fprintf('Reading in solar wind data\n');
 
 %Filename to save data to for easier/quicker future reading
 filename=sprintf('data/%s/DifferencesData_%s_3D.mat',runname,runname);
@@ -34,21 +40,36 @@ else
 end
 
 
+
+fprintf('Reading in model data\n');
+
 %Default headers for model data
-dataheaders={'x','y','z','x','y','z','B_x','B_y','B_z','jx','jy','jz','ux','uy','uz','p','rho'};
+dataheaders={'x','y','z','bx','by','bz','ux','rho'};
 
 %Find all CDF files for each timestep and read them in to one array
 basedir='/home/victoir/Work/Differences/data/Victoir_Veibell_041316_1/GM_CDF/';
 files=dir(sprintf('%s/*cdf',basedir));
 
-for i=1:length(files)
-    currentfile=files(i).name;
-    readname=sprintf('%s/%s',basedir,currentfile);
-    readdata=cdfread(readname,'Variables',{'x','y','z','bx','by','bz','rho'});
-    readmat(i,:,:)=double(cell2mat(readdata));
-    
-end
+filename3=sprintf('data/%s/DifferencesData_%s_all_3D.mat',runname,runname);
+if(exist(filename3,'file'))
+    load(filename3)
+else
 
+    %Pre-allocate readmat for speed
+    info=cdfinfo(sprintf('%s/%s',basedir,files(1).name));
+    presize=info.Variables{1,2};
+    readmat=zeros(length(files),presize(1),length(dataheaders));
+    
+    for i=1:length(files)
+        currentfile=files(i).name;
+        readname=sprintf('%s/%s',basedir,currentfile);
+        readdata=cdfread(readname,'Variables',dataheaders);
+        readmat(i,:,:)=double(cell2mat(readdata));
+
+    end
+    save(filename3,'readmat');
+end
+    
 fprintf('Done reading data. Calculating correlations\n');
 
 warning('off','all') %lots of rank deficient warnings
@@ -56,7 +77,7 @@ warning('off','all') %lots of rank deficient warnings
 %Create correlations for each gridpoint
 corrmat=zeros(1,max(size(readmat)));
 for i=1:max(size(readmat))
-    [~,~,~,~,corr]=IR(readmat(:,i,7),bininputs(:,8:15),0,4);
+    [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
     corrmat(i)=corr;
 end
     
@@ -70,6 +91,7 @@ print('-depsc2','-r200', 'NoteFigures/CorrFullScatter3.eps')
 close all;
 
 %Plot only points with certain correlation
+figure;
 drawcorr=0.9;
 drawwidth=0.01;
 POI=((corrmat<(drawcorr+drawwidth))+(corrmat>(drawcorr-drawwidth)))>1;

@@ -20,6 +20,9 @@ Correlation of Ionospheric region (2.8-3 R_E):
 Attempt at a [stereographic projection](https://www.uwgb.edu/dutchs/STRUCTGE/sphproj.htm):
 ![stereo](NoteFigures/StereographicIonosphere.png)
 
+Top and bottom hemispheres of the ionosphere cut:
+![twoplot](NoteFigures/IonospherePolarCuts.png)
+
 
 ### September 1, 2016 ###
 Trying to make correlation plots. This takes quite a while and 5.5GB of memory. This is manageable with scatter3, but isosurface and contourslice require regridding to a meshgrid format which returns "Maximum variable size allowed by the program is exceeded."

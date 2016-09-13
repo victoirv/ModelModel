@@ -80,7 +80,9 @@ end
 %Plot surface of correlations at each grid point, colored by correlation
 %value
 figure
-surf(xs,zs,corrs','FaceLighting','phong')
+hold on
+surf(xs,zs,corrs','EdgeColor','none','LineStyle','none','FaceLighting','phong')
+axis square
 colorbar
 view(0,90)
 title(sprintf('Correlation of predicted %s and theoretical %s',dataheaders{varnum},dataheaders{varnum}))
