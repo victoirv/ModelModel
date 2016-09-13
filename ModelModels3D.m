@@ -50,10 +50,14 @@ dataheaders={'x','y','z','bx','by','bz','ux','rho'};
 basedir='/home/victoir/Work/Differences/data/Victoir_Veibell_041316_1/GM_CDF/';
 files=dir(sprintf('%s/*cdf',basedir));
 
+%{
+%Attempt to save giant file. Doesn't seem to work as is, possible memory
+%limitations
 filename3=sprintf('data/%s/DifferencesData_%s_all_3D.mat',runname,runname);
 if(exist(filename3,'file'))
     load(filename3)
 else
+%}
 
     %Pre-allocate readmat for speed
     info=cdfinfo(sprintf('%s/%s',basedir,files(1).name));
@@ -67,19 +71,24 @@ else
         readmat(i,:,:)=double(cell2mat(readdata));
 
     end
+    
+    %{
     save(filename3,'readmat');
 end
+    %}
     
 fprintf('Done reading data. Calculating correlations\n');
 
 warning('off','all') %lots of rank deficient warnings
 
+filenamecorr=sprintf('data/%s/DifferencesData_%s_all_3D_corr_%d_%d.mat',runname,runname,modelnum,inputnum);
 %Create correlations for each gridpoint
 corrmat=zeros(1,max(size(readmat)));
 for i=1:max(size(readmat))
     [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
     corrmat(i)=corr;
 end
+save(filenamecorr,'corrmat'); %Save so analysis can be done later without recomputing
     
 fprintf('Done with correlations. Plotting\n');
 %%%%%%%%%%%%%%%%%%%%%
@@ -107,6 +116,27 @@ scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
 title('Correlation values of Ionosphere')
 print('-depsc2','-r200', 'NoteFigures/IonosphereScatter3.eps')
 print('-dpng','-r200', 'NoteFigures/IonosphereScatter3.png')
+
+figure;
+subplot(1,2,1)
+r=sqrt(readmat(1,:,1).^2+readmat(1,:,2).^2+readmat(1,:,3).^2);
+POI=((r<=3.2)+(r>=2.8)+(readmat(1,:,3)<0))>2;
+scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Y (R_E)')
+title('Z<0')
+
+subplot(1,2,2)
+POI=((r<=3.2)+(r>=2.8)+(readmat(1,:,3)>0))>2;
+scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Y (R_E)')
+title('Z>0')
+print('-depsc2','-r200', 'NoteFigures/IonospherePolarCuts.eps')
+print('-dpng','-r200', 'NoteFigures/IonospherePolarCuts.png')
+
 
 
 figure; scatter(readmat(1,POI,1)./(1+readmat(1,POI,3)),readmat(1,POI,2)./(1+readmat(1,POI,3)),[],corrmat(POI))
