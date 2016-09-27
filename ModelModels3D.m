@@ -99,6 +99,7 @@ if(~exist(filenamecorr,'file'))
 
 else
     fprintf('Correlation data already exists; loading from file and moving to plots')
+    load(filenamecorr)
 end
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -126,6 +127,30 @@ scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 title('Correlation values of Ionosphere')
 print('-depsc2','-r200', 'NoteFigures/IonosphereScatter3.eps')
 print('-dpng','-r200', 'NoteFigures/IonosphereScatter3.png')
+
+%Continue using r for ionosphere and POI from previous figure
+figure
+tri=delaunay(X(POI),Y(POI),Z(POI));
+subplot(1,2,1)
+trisurf(tri,X(POI),Y(POI),Z(POI),corrmat(POI))
+view(90,90)
+lighting phong
+shading interp
+xlabel('X (R_E)')
+ylabel('Y (R_E)')
+zlabel('Z (R_E)')
+subplot(1,2,2)
+trisurf(tri,X(POI),Y(POI),Z(POI),corrmat(POI))
+view(90,270)
+lighting phong
+shading interp
+xlabel('X (R_E)')
+ylabel('Y (R_E)')
+zlabel('Z (R_E)')
+colorbar EastOutside
+print('-depsc2','-r200', 'NoteFigures/IonosphereSurf.eps')
+print('-dpng','-r200', 'NoteFigures/IonosphereSurf.png')
+
 
 figure;
 subplot(1,2,1)
@@ -162,6 +187,8 @@ F=scatteredInterpolant(X',Y',Z',corrmat');
 
 [Xg,Yg,Zg]=meshgrid(linspace(min(X),max(X),100),linspace(min(Y),max(Y),100),linspace(min(Z),max(Z),100));
 V=F(Xg,Yg,Zg);
+
+
 %%%%%%%%%%%%%%
 %Stuff after here is just looking at one CDF file (one time step), not
 %correlations. Kept mostly as sample algorithms
