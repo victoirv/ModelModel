@@ -10,6 +10,11 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### September 27, 2016 ###
+Looking into [large file handling](http://www.matlabtips.com/how-to-store-large-datasets/) and [volume visualization](https://www.mathworks.com/help/matlab/volume-visualization.html)
+
+Code now saves X,Y,Z, and correlations for each point based on what model inputs and outputs you select, saving 30+ minutes of reading and calculations on subsequent runs. 
+
 ### September 5, 2016 ###
 Correlation of model-predicted V_x using solar wind input V_x:
 ![vx](figures/PNGs/ModelModelCorrelation_ux.png)

@@ -8,94 +8,104 @@ end
 
 %Define what run you want to use
 runname='Victoir_Veibell_041316_1';
+filenamecorr=sprintf('data/%s/DifferencesData_%s_all_3D_corr_%d_%s.mat',runname,runname,modelnum,num2str(inputnum,'%d'));
 
+%Test if correlation data already exists for this particular set of inputs
+%and outputs (saves half an hour easily if so)
+if(~exist(filenamecorr,'file'))
 
-fprintf('Reading in solar wind data\n');
+    fprintf('Reading in solar wind data\n');
 
-%Filename to save data to for easier/quicker future reading
-filename=sprintf('data/%s/DifferencesData_%s_3D.mat',runname,runname);
+    %Filename to save data to for easier/quicker future reading
+    filename=sprintf('data/%s/DifferencesData_%s_3D.mat',runname,runname);
 
-if(exist(filename,'file'))
-    load(filename)
-else
-    %Find number of existing time steps, then read in the model data for each
-    %step into one array
-    [status,ncuts]=system(sprintf('ls -1 data/%s/data/cuts/ | wc -l',runname));
-    ncuts=str2double(ncuts);
+    if(exist(filename,'file'))
+        load(filename)
+    else
+        %Find number of existing time steps, then read in the model data for each
+        %step into one array
+        [status,ncuts]=system(sprintf('ls -1 data/%s/data/cuts/ | wc -l',runname));
+        ncuts=str2double(ncuts);
 
-    %Variable names for model input data (solar wind)
-    inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]'};
+        %Variable names for model input data (solar wind)
+        inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]'};
 
-    %Read in solar wind data
-    inputs=dlmread(sprintf('data/%s/%s_IMF.txt',runname,runname));
-    
-    %Bin the input data to be on the same grid as the model data that came
-    %from brian's code
-    for i=1:(ncuts-1)
-        bininputs(i,:)=median(inputs((i-1)*30+1:i*30,:));
+        %Read in solar wind data
+        inputs=dlmread(sprintf('data/%s/%s_IMF.txt',runname,runname));
+
+        %Bin the input data to be on the same grid as the model data that came
+        %from brian's code
+        for i=1:(ncuts-1)
+            bininputs(i,:)=median(inputs((i-1)*30+1:i*30,:));
+        end
+        bininputs(ncuts,:)=median(inputs((ncuts-1)*30+1:end,:));
+
+        save(filename,'inputs','bininputs','inputvars');
     end
-    bininputs(ncuts,:)=median(inputs((ncuts-1)*30+1:end,:));
-    
-    save(filename,'inputs','bininputs','inputvars');
-end
 
+    fprintf('Reading in model data\n');
 
+    %Default headers for model data
+    dataheaders={'x','y','z','bx','by','bz','ux','rho'};
 
-fprintf('Reading in model data\n');
+    %Find all CDF files for each timestep and read them in to one array
+    basedir='/home/victoir/Work/Differences/data/Victoir_Veibell_041316_1/GM_CDF/';
+    files=dir(sprintf('%s/*cdf',basedir));
 
-%Default headers for model data
-dataheaders={'x','y','z','bx','by','bz','ux','rho'};
-
-%Find all CDF files for each timestep and read them in to one array
-basedir='/home/victoir/Work/Differences/data/Victoir_Veibell_041316_1/GM_CDF/';
-files=dir(sprintf('%s/*cdf',basedir));
-
-%{
-%Attempt to save giant file. Doesn't seem to work as is, possible memory
-%limitations
-filename3=sprintf('data/%s/DifferencesData_%s_all_3D.mat',runname,runname);
-if(exist(filename3,'file'))
-    load(filename3)
-else
-%}
-
-    %Pre-allocate readmat for speed
-    info=cdfinfo(sprintf('%s/%s',basedir,files(1).name));
-    presize=info.Variables{1,2};
-    readmat=zeros(length(files),presize(1),length(dataheaders));
-    
-    for i=1:length(files)
-        currentfile=files(i).name;
-        readname=sprintf('%s/%s',basedir,currentfile);
-        readdata=cdfread(readname,'Variables',dataheaders);
-        readmat(i,:,:)=double(cell2mat(readdata));
-
-    end
-    
     %{
-    save(filename3,'readmat');
-end
+    %Attempt to save giant file. Doesn't seem to work as is, possible memory
+    %limitations
+    filename3=sprintf('data/%s/DifferencesData_%s_all_3D.mat',runname,runname);
+    if(exist(filename3,'file'))
+        load(filename3)
+    else
     %}
-    
-fprintf('Done reading data. Calculating correlations\n');
 
-warning('off','all') %lots of rank deficient warnings
+        %Pre-allocate readmat for speed
+        info=cdfinfo(sprintf('%s/%s',basedir,files(1).name));
+        presize=info.Variables{1,2};
+        readmat=zeros(length(files),presize(1),length(dataheaders));
 
-filenamecorr=sprintf('data/%s/DifferencesData_%s_all_3D_corr_%d_%d.mat',runname,runname,modelnum,inputnum);
-%Create correlations for each gridpoint
-corrmat=zeros(1,max(size(readmat)));
-for i=1:max(size(readmat))
-    [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
-    corrmat(i)=corr;
+        for i=1:length(files)
+            currentfile=files(i).name;
+            readname=sprintf('%s/%s',basedir,currentfile);
+            readdata=cdfread(readname,'Variables',dataheaders);
+            readmat(i,:,:)=double(cell2mat(readdata));
+
+        end
+
+        %{
+        save(filename3,'readmat');
+    end
+        %}
+
+    fprintf('Done reading data. Calculating correlations\n');
+
+    warning('off','all') %lots of rank deficient warnings
+
+
+    %Create correlations for each gridpoint
+    corrmat=zeros(1,max(size(readmat)));
+    for i=1:max(size(readmat))
+        [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
+        corrmat(i)=corr;
+    end
+    X=readmat(1,:,1);
+    Y=readmat(1,:,2);
+    Z=readmat(1,:,3);
+    save(filenamecorr,'X','Y','Z','corrmat'); %Save so analysis can be done later without recomputing
+
+    fprintf('Done with correlations. Plotting\n');
+
+else
+    fprintf('Correlation data already exists; loading from file and moving to plots')
 end
-save(filenamecorr,'corrmat'); %Save so analysis can be done later without recomputing
-    
-fprintf('Done with correlations. Plotting\n');
+
 %%%%%%%%%%%%%%%%%%%%%
 %Plotting
 %%%%%%%%%%%%%%%%%%%%%
 %Plot all data
-scatter3(readmat(1,:,1),readmat(1,:,2),readmat(1,:,3),[],corrmat);
+scatter3(X,Y,Z,[],corrmat);
 print('-depsc2','-r200', 'NoteFigures/CorrFullScatter3.eps')
 close all;
 
@@ -104,24 +114,23 @@ figure;
 drawcorr=0.9;
 drawwidth=0.01;
 POI=((corrmat<(drawcorr+drawwidth))+(corrmat>(drawcorr-drawwidth)))>1;
-scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 title(sprintf('Correlation values of %2.2f +- %2.2f',drawcorr,drawwidth))
 print('-depsc2','-r200', 'NoteFigures/CorrPOIScatter3.eps')
 
 
 figure;
-r=sqrt(readmat(1,:,1).^2+readmat(1,:,2).^2+readmat(1,:,3).^2);
+r=sqrt(X.^2+Y.^2+Z.^2);
 POI=((r<=3)+(r>=2.8))>1;
-scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 title('Correlation values of Ionosphere')
 print('-depsc2','-r200', 'NoteFigures/IonosphereScatter3.eps')
 print('-dpng','-r200', 'NoteFigures/IonosphereScatter3.png')
 
 figure;
 subplot(1,2,1)
-r=sqrt(readmat(1,:,1).^2+readmat(1,:,2).^2+readmat(1,:,3).^2);
 POI=((r<=3.2)+(r>=2.8)+(readmat(1,:,3)<0))>2;
-scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Y (R_E)')
@@ -129,7 +138,7 @@ title('Z<0')
 
 subplot(1,2,2)
 POI=((r<=3.2)+(r>=2.8)+(readmat(1,:,3)>0))>2;
-scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Y (R_E)')
@@ -139,18 +148,23 @@ print('-dpng','-r200', 'NoteFigures/IonospherePolarCuts.png')
 
 
 
-figure; scatter(readmat(1,POI,1)./(1+readmat(1,POI,3)),readmat(1,POI,2)./(1+readmat(1,POI,3)),[],corrmat(POI))
+figure; scatter(X(POI)./(1+Y(POI)),Y(POI)./(1+Z(POI)),[],corrmat(POI))
 print('-dpng','-r200','NoteFigures/StereographicIonosphere.png')
 
 %Plot a cutplane or correlations
 POI=readmat(1,:,2)==0; %Where Y=0
-scatter3(readmat(1,POI,1),readmat(1,POI,2),readmat(1,POI,3),[],corrmat(POI));
+scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 print('-depsc2','-r200', 'NoteFigures/CorrPOIScatter3.eps')
 
 
 
+F=scatteredInterpolant(X',Y',Z',corrmat');
+
+[Xg,Yg,Zg]=meshgrid(linspace(min(X),max(X),100),linspace(min(Y),max(Y),100),linspace(min(Z),max(Z),100));
+V=F(Xg,Yg,Zg);
 %%%%%%%%%%%%%%
-%Stuff after here is just looking at one CDF file (one time step), not correlations
+%Stuff after here is just looking at one CDF file (one time step), not
+%correlations. Kept mostly as sample algorithms
 
 
 
