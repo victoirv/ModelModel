@@ -3,7 +3,7 @@ function [ca, cb, cc, xnew, corr, eff, casd, cbsd, ccsd] = IR(x,f,numxcoef,numfc
 %Where ca are the x coefficients, cb the f coefficients
 %Allows for a matrix of impulses
 %***Important: Assumes more data points than impulses***%
- 
+
 if (nargin < 4)
     disp('Usage: function [ca, cb, cc, xnew, corr, eff, casd, cbsd, ccsd] = IR(x,f,numxcoef,numfcoef,lag,advance,loops)');
     disp('Where ca are the x coefficients, cb the f coefficients');
@@ -43,6 +43,7 @@ fstart=predstart-numfcoef-lag+advance;
 len=floor(length(x)-predstart-advance);
 
 numimpulses=min(size(f));
+
     
 Z=zeros(len,numxcoef+numfcoef*numimpulses+1);
 
@@ -60,12 +61,15 @@ Z(:,end)=1;
 b=x(predstart:predstart+len-1);
 Z=[Z(1:end,:) b'];
 
-for a=1:(numxcoef+numfcoef*numimpulses+1+1) %+1 for mean-normalization coef (cc, column of 1s), and +1 for column of 'b'
-    Z(isnan(Z(:,a)),:)=[];
+if(~isempty(find(~(x==x),1)))
+    for a=1:(numxcoef+numfcoef*numimpulses+1+1) %+1 for mean-normalization coef (cc, column of 1s), and +1 for column of 'b'
+        Z(isnan(Z(:,a)),:)=[];
+    end
 end
 
 b=Z(:,end);
 A=Z(:,1:end-1);
+
 
 if(loops==1)
     coef=A(1:end,:)\b;
@@ -94,7 +98,6 @@ else
 end
 
 
-
 xtemp=x;
 ftemp=f;
 
@@ -102,17 +105,22 @@ xnew=zeros(1,length(x));
 xnew(1:predstart)=xtemp(1:predstart);
 
 %Anywhere f is nan, don't predict, just copy data
+%{
 iter=1:(length(f));
 iter=iter(iter>=predstart+advance); %Don't use copied variables
 iter=iter(iter<=length(f)-lag); %Allow space to predict 
-
-
 
 for i=iter
     %xnew(i)=(xnew(i-numxcoef:1:i-1)'*ca)+(ftemp(i-numfcoef+1:1:i)'*cb)+cc;
     xnew(i+lag)=(xtemp(i-numxcoef:1:i-1)*ca)+(reshape(ftemp(:,i-numfcoef:1:i-1)',1,[])*cb)+cc;
     %xnew(i+lag)=(xnew(i-numxcoef:1:i-1)*ca)+(reshape(ftemp(:,i-numfcoef:1:i-1),1,[])*cb)+cc;
 end
+%}
+
+%Because A was made to predict 
+xnew(predstart:end-1)=A*coef;
+xnew(end)=(xtemp(end-numxcoef:1:end-1)*ca)+(reshape(ftemp(:,end-numfcoef:1:end-1)',1,[])*cb)+cc;
+
 
 %xnew(isnan(f))=NaN;
 
@@ -128,3 +136,4 @@ eff=eff/(length(xnew)-predstart);
 if(xswitched) %If x came in as a column vector, make xnew a column vector
     xnew=xnew';
 end
+
