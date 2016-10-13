@@ -100,7 +100,7 @@ if(~exist(filenamecorr,'file'))
     fprintf('Done with correlations. Plotting\n');
 
 else
-    fprintf('Correlation data already exists; loading from file and moving to plots')
+    fprintf('Correlation data already exists; loading from file and moving to plots\n')
     load(filenamecorr)
 end
 
@@ -197,16 +197,13 @@ F=scatteredInterpolant(X',Y',Z',corrmat');
 V=F(Xg,Yg,Zg);
 isosurface(Xg,Yg,Zg,V,2)
 
-
-
+%2D interpolated cutplane at Y=0
 [Xg,Zg]=meshgrid(linspace(min(X),max(X),100),linspace(min(Z),max(Z),100));
-vq=griddata(X,Z,corrmat,Xg,Zg);
-surf(Xg,Zg,vq)
-view(0,90)
-xlabel('X (R_E)')
-zlabel('Z (R_E)')
-title('Correlations on the Y=0 cutplane')
-print('-dpng','-r200','NoteFigures/Y0Correlations.png')
+Vg=griddata(X,Z,corrmat,Xg,Zg);
+figure
+surf(Xg,Zg,Vg);
+
+print('-dpng','-r200','NoteFigures/StereographicIonosphere.png')
 
 %%%%%%%%%%%%%%
 %Stuff after here is just looking at one CDF file (one time step), not
