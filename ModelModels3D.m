@@ -70,7 +70,7 @@ if(~exist(filenamecorr,'file'))
             currentfile=files(i).name;
             readname=sprintf('%s/%s',basedir,currentfile);
             readdata=cdfread(readname,'Variables',dataheaders);
-            readmat(i,:,:)=double(cell2mat(readdata));
+            readmat(i,:,:)=sortrows(sortrows(sortrows(double(cell2mat(readdata)),1),2),3);
 
         end
 
@@ -86,9 +86,11 @@ if(~exist(filenamecorr,'file'))
 
     %Create correlations for each gridpoint
     corrmat=zeros(1,max(size(readmat)));
+    corrmatv=zeros(1,max(size(readmat)));
     for i=1:max(size(readmat))
         [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
         corrmat(i)=corr;
+        corrmatv(i)=readmat(1,i,modelnum);
     end
     X=readmat(1,:,1);
     Y=readmat(1,:,2);
@@ -101,6 +103,12 @@ else
     fprintf('Correlation data already exists; loading from file and moving to plots')
     load(filenamecorr)
 end
+
+
+%Verification
+POI=(abs(Y)<=0.2);
+scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
+scatter3(X(POI),Y(POI),Z(POI),[],corrmatv(POI));
 
 %%%%%%%%%%%%%%%%%%%%%
 %Plotting
@@ -187,7 +195,7 @@ F=scatteredInterpolant(X',Y',Z',corrmat');
 
 [Xg,Yg,Zg]=meshgrid(linspace(min(X),max(X),100),linspace(min(Y),max(Y),100),linspace(min(Z),max(Z),100));
 V=F(Xg,Yg,Zg);
-
+isosurface(Xg,Yg,Zg,V,2)
 
 %%%%%%%%%%%%%%
 %Stuff after here is just looking at one CDF file (one time step), not
