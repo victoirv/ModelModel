@@ -88,7 +88,8 @@ if(~exist(filenamecorr,'file'))
     corrmat=zeros(1,max(size(readmat)));
     corrmatv=zeros(1,max(size(readmat)));
     for i=1:max(size(readmat))
-        [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
+        %[~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
+        [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,1,0,1); %Linear regression of same-time inputs to output
         corrmat(i)=corr;
         corrmatv(i)=readmat(1,i,modelnum);
     end
@@ -105,10 +106,45 @@ else
 end
 
 
-%Verification
+
 POI=(abs(Y)<=0.2);
 scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
-scatter3(X(POI),Y(POI),Z(POI),[],corrmatv(POI));
+view(-50,30)
+xlabel('X (R_E)')
+ylabel('Y (R_E)')
+zlabel('Z (R_E)')
+colorbar
+print('-depsc2','-r200', 'NoteFigures/ClosestY0Points.eps')
+print('-dpng','-r200', 'NoteFigures/ClosestY0Points.png')
+%Verification
+%scatter3(X(POI),Y(POI),Z(POI),[],corrmatv(POI));
+
+%Gif Time
+figure
+giffilename = 'NoteFigures/AllYCutsScaled.gif';
+k=1;
+for i=unique(abs(Y))
+    POI=(abs(Y)==i);
+    scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
+    view(-50,30)
+    axis([min(X) max(X) min(Y) max(Y) min(Z) max(Z)])
+    xlabel('X (R_E)')
+    ylabel('Y (R_E)')
+    zlabel('Z (R_E)')
+    title(sprintf('Cutplane Y=%2.1f',i))
+    colorbar
+
+      drawnow
+      frame = getframe(1);
+      im = frame2im(frame);
+      [imind,cm] = rgb2ind(im,256);
+      if k == 1;
+          imwrite(imind,cm,giffilename,'gif', 'Loopcount',inf);
+      else
+          imwrite(imind,cm,giffilename,'gif','WriteMode','append');
+      end
+      k=k+1;
+end
 
 %%%%%%%%%%%%%%%%%%%%%
 %Plotting
@@ -197,62 +233,26 @@ F=scatteredInterpolant(X',Y',Z',corrmat');
 V=F(Xg,Yg,Zg);
 isosurface(Xg,Yg,Zg,V,2)
 
-%2D interpolated cutplane at Y=0
-[Xg,Zg]=meshgrid(linspace(min(X),max(X),100),linspace(min(Z),max(Z),100));
-Vg=griddata(X,Z,corrmat,Xg,Zg);
-figure
-surf(Xg,Zg,Vg);
-
-print('-dpng','-r200','NoteFigures/StereographicIonosphere.png')
-
-%%%%%%%%%%%%%%
-%Stuff after here is just looking at one CDF file (one time step), not
-%correlations. Kept mostly as sample algorithms
 
 
-
-%Read in CDF and convert to workable matrix. Note, not all variables have
-%the same amount of rows, but since we're selecting  ones that do we can
-%convert straight to a matrix, and then to a double() for the sake of the
-%following functions that require doubles.
-test=cdfread('/home/victoir/Work/Differences/data/Victoir_Veibell_041316_1/GM_CDF/3d__var_1_e20100101-000000-000.out.cdf','Variables',{'x','y','z','bx','by','bz','rho'});
-testmat=double(cell2mat(test));
-
-%Interpolate onto a mesh grid.
-F=scatteredInterpolant(double(testmat(:,1)),double(testmat(:,2)),double(testmat(:,3)),double(testmat(:,7)));
-[X,Y,Z]=meshgrid(linspace(min(testmat(:,1)),max(testmat(:,1)),100),linspace(min(testmat(:,2)),max(testmat(:,2)),100),linspace(min(testmat(:,3)),max(testmat(:,3)),100));
-V=F(double(X),double(Y),double(Z));
-X=X(:);
-Y=Y(:);
-Z=Z(:);
-V=V(:);
-%Can attempt to plot all data, but plotting 1M points is a bit much
-%scatter3(X(:),Y(:),Z(:),[],V(:))
-
-%Only plotting points of interest at a certain contour. Un-hard-code this
-%as threshold+-epsilon
-POI=((V(:)<1.9)+(V(:)>1.8))>1;
-scatter3(X(POI),Y(POI),Z(POI),[],V(POI),'.','LineWidth',0.1)
-print('-depsc2','-r200', 'NoteFigures/InterpScatter3.eps')
-
-%Testing non-interpolated grid
-POI2=((testmat(:,7)<1.9)+(testmat(:,7)>1.8))>1;
-scatter3(testmat(POI2,1),testmat(POI2,2),testmat(POI2,3),[],testmat(POI2,7),'.','LineWidth',0.1)
-print('-depsc2','-r200', 'NoteFigures/OriginalScatter3.eps')
+[Xg,Zg]=meshgrid(linspace(min(X),max(X),200),linspace(min(Z),max(Z),200));
+vq=griddata(X,Z,corrmat,Xg,Zg);
+surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+zlabel('Z (R_E)')
+title('Correlations on the Y=0 cutplane')
+print('-dpng','-r200','NoteFigures/Y0Correlations.png')
 
 
-%Interpolated isosurface selects specific value and makes solid surface for
-%it.
-isosurface(X,Y,Z,V,2)
-
-%First workings of an animation
-for i=[100 10 5 2 1.8 1.5 1.3 1 0.5 0.1]
-    close all; 
-    isosurface(X,Y,Z,V,i); 
-    pause(2);
-end
-
-
-
-
+POI=abs(Y)<=1;
+[Xg,Zg]=meshgrid(linspace(min(X(POI)),max(X(POI)),200),linspace(min(Z(POI)),max(Z(POI)),200));
+vq=griddata(X(POI),Z(POI),corrmat(POI),Xg,Zg);
+surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colorbar
+title('Correlations on the Y=0 cutplane interpolated from grid points of Y<=1')
+print('-dpng','-r200','NoteFigures/Y0Correlations-Near.png')
 

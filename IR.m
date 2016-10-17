@@ -40,7 +40,7 @@ predstart=max(numxcoef,numfcoef)+1+lag-advance;
 xstart=predstart-numxcoef-lag+advance;
 fstart=predstart-numfcoef-lag+advance;
 
-len=floor(length(x)-predstart-advance);
+len=floor(length(x)-predstart);
 
 numimpulses=min(size(f));
 
