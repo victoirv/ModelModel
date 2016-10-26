@@ -5,6 +5,7 @@
 
 
 ## History ##
+* [October 26: One second data](#october-26-2016)
 * [October 17: 3D Correlation Plots](#october-17-2016)
 * [September 27: Optimization](#september-27-2016)
 * [September 5: Vx vs Vx](#september-5-2016)
@@ -12,6 +13,15 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### October 26, 2016 ###
+Looking at the results for the CCMC run with one-second cadence produces the following two plots. For modeling Bz:
+![vx](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415.png)
+
+And for modeling Vx:
+![vx](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415.png)
+
+I'm still generating the plots for Uy, Uz, Bx, By, Jx-z, Rho, and P, but this required regenerating all the mat files (and finding more ways to free up hard drive space and deal with corrupt mat files from when it runs out), and now generating a correlation matrix for each variable, which takes ~1 hour each for the full solar wind input model. Will update here when they  complete.
+
 ### October 17, 2016 ###
 Turns out the cdf files for each timestep in a run don't keep consistent ordering of rows. Sorting each cdf file by X, Y, and Z results in a matrix that can be correlated row-wise through time. The following figures use a 10-lag (5 hour) impulse response model of V_x given all solar wind B components, V components, N, and T. Since there are no grid points at Y=0, here are the closest values at Y=0.125:
 ![vx](NoteFigures/ClosestY0Points.png)

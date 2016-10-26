@@ -5,7 +5,7 @@ if(nargin<1 || isempty(runname))
     runname='Victoir_Veibell_092716_1'; %Default to ux
 end
 if(nargin<2)
-    keepvars={'x','y','z','ux','bz'}; 
+    keepvars={'x','y','z','ux','uy','uz','bx','by','bz','jx','jy','jz','rho','p'}; 
 end
 
 
@@ -18,10 +18,14 @@ end
     for i=1:length(files)
             currentfile=files(i).name;
             readname=sprintf('%s/%s',basedir,currentfile);
-            readdata=sortrows(sortrows(sortrows(cell2mat(cdfread(readname,'Variables',keepvars)),1),2),3);
-            
-            
             outfile=sprintf('%s/%s_%s.mat',basedir,currentfile(1:end-4),strjoin(keepvars,''));
-            fprintf('%s to %s\n',currentfile,outfile);
-            save(outfile,'readdata','-v7.3')
+            
+            if(~exist(outfile,'file'))
+            readdata=sortrows(sortrows(sortrows(cell2mat(cdfread(readname,'Variables',keepvars)),1),2),3);
+            fprintf('%s done\n',currentfile);
+            save(outfile,'readdata','keepvars','-v7.3')
+            else
+            fprintf('Already did %s\n',currentfile);
+            end
+            
     end
