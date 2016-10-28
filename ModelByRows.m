@@ -1,4 +1,4 @@
-function ModelByRows(runname,runvars,xvar,fvar)
+function ModelByRows(runname,runvars,xvar,fvar,IRParam)
 
 if(nargin<1 || isempty(runname))
     runname='Victoir_Veibell_092716_1'; %Default to ux
@@ -11,6 +11,10 @@ if(nargin<3 || isempty(xvar))
 end
 if(nargin<4 || isempty(fvar))
     fvar=[8:15]; %Default to everything
+end
+if(nargin<5 || isempty(IRParam))
+    IRParam=[0 10 0]; %Default to 10 lags, no persist, no advance prediction
+    %Make [0 1 1] for straight regression
 end
 
 
@@ -34,7 +38,7 @@ end
 
 basedir=sprintf('/home/victoir/Work/Differences/data/%s/GM_CDF/',runname);
 files=dir(sprintf('%s/*%s.mat',basedir,strjoin(runvars,'')));
-FigureBase=sprintf('%s_%s_%s',runname(end-7:end-2),runvars{xvar},num2str(fvar,'%d'));
+FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},num2str(fvar,'%d'),num2str(IRParam,'%d'));
 
 %Because the model will output all solar wind conditions, but only the first subset of model run data once you hit a file size limit
 inputs=inputs(1:length(files),:);
@@ -46,8 +50,9 @@ chunksize=5000;
 currentfile=sprintf('%s/%s',basedir,files(1).name);
 matObj=matfile(currentfile);
 N = max(size(matObj,'readdata'));
+NVars = length(matObj.keepvars);
 
-filenamecorr=sprintf('data/%s/%s_%s_corr.mat',runname,num2str(xvar),num2str(fvar,'%d'));
+filenamecorr=sprintf('data/%s/%s_%s_%s_corr.mat',runname,num2str(xvar),num2str(fvar,'%d'),num2str(IRParam,'%d'));
 %corrObj=matfile(filenamecorr,'Writable',true);
 
 x=double(matObj.readdata(:,1));
@@ -64,7 +69,7 @@ corrObj.corrmat=zeros(length(x),1);
 if(~exist(filenamecorr,'file'))
     startpoint=1;
     endpoint=startpoint+chunksize-1;
-    data=zeros(length(files),chunksize,length(matObj.keepvars));
+    data=zeros(length(files),chunksize,NVars);
 else
     load(filenamecorr)
     startpoint=find(corrmat==-1,1);
@@ -75,10 +80,10 @@ else
         else
             endpoint=N;
         end
-        data=zeros(length(files),endpoint-startpoint+1,5);
+        data=zeros(length(files),endpoint-startpoint+1,NVars);
         
     else
-        fprintf('Correlations already complete. To regenerate, delete the file. Moving on to plotting')
+        fprintf('Correlations already complete. To regenerate, delete the file. Moving on to plotting\n')
         startpoint=-1;
     end
     
@@ -96,7 +101,7 @@ if(startpoint>0)
         end
         fprintf('Correlating elements %d - %d\n',startpoint,endpoint-1);
         for j=1:(endpoint-startpoint)
-            [~,~,~,~,corr]=IR(data(:,j,xvar),inputs(:,fvar),0,10);
+            [~,~,~,~,corr]=IR(data(:,j,xvar),inputs(:,fvar),IRParam(1),IRParam(2),0,IRParam(3));
             corrmat(startpoint+j-1)=corr;
         end
         %Write results so far to file. Doesn't seem to like vector addressing
@@ -108,7 +113,7 @@ if(startpoint>0)
         elseif(endpoint+chunksize>N)
             endpoint=N;
             startpoint=startpoint+chunksize-1;
-            data=zeros(length(files),endpoint-startpoint+1,5);
+            data=zeros(length(files),endpoint-startpoint+1,NVars);
         else
             startpoint=startpoint+chunksize-1;
             endpoint=startpoint+chunksize-1;
@@ -125,7 +130,8 @@ surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
-colorbar
+ch=colorbar;
+set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
 title(sprintf('Correlations of %s on the Y=0 cutplane interpolated from grid points of Y<=1',runvars{xvar}))
 print('-depsc2','-r200',sprintf('figures/Y0Correlations-Near_%s.eps',FigureBase))
 print('-dpng','-r200',sprintf('figures/PNGs/Y0Correlations-Near_%s.png',FigureBase))

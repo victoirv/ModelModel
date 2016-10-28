@@ -14,11 +14,41 @@
 
 * * *
 ### October 26, 2016 ###
-Looking at the results for the CCMC run with one-second cadence produces the following two plots. For modeling Bz:
+Looking at the results for the CCMC run with one-minute cadence produces the following plots.
+
+#### Regression ####
+Bx:
+![f](figures/PNGs/Y0Correlations-Near_092716_bx_8 9101112131415_011.png)
+
+By:
+![f](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415_011.png)
+
+P:
+![f](figures/PNGs/Y0Correlations-Near_092716_p_8 9101112131415_011.png)
+
+Rho:
+![f](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415_011.png)
+
+#### 10 1-minute lags ####
+Vx:
+![vx](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415.png)
+
+By:
+![vx](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415.png)
+
+Bz:
 ![vx](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415.png)
 
-And for modeling Vx:
-![vx](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415.png)
+Jx:
+![vx](figures/PNGs/Y0Correlations-Near_092716_jx_8 9101112131415.png)
+Jy:
+![vx](figures/PNGs/Y0Correlations-Near_092716_jy_8 9101112131415.png)
+Jz:
+![vx](figures/PNGs/Y0Correlations-Near_092716_jz_8 9101112131415.png)
+
+Rho:
+![vx](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415.png)
+
 
 I'm still generating the plots for Uy, Uz, Bx, By, Jx-z, Rho, and P, but this required regenerating all the mat files (and finding more ways to free up hard drive space and deal with corrupt mat files from when it runs out), and now generating a correlation matrix for each variable, which takes ~1 hour each for the full solar wind input model. Will update here when they  complete.
 
