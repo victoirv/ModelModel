@@ -17,40 +17,35 @@
 Looking at the results for the CCMC run with one-minute cadence produces the following plots.
 
 #### Regression ####
-Bx:
-![f](figures/PNGs/Y0Correlations-Near_092716_bx_8 9101112131415_011.png)
+Bx | By | Bz
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_092716_bx_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415_011.png)
 
-By:
-![f](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415_011.png)
 
-P:
-![f](figures/PNGs/Y0Correlations-Near_092716_p_8 9101112131415_011.png)
+Vx | Vy | Vz
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_uy_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_uz_8 9101112131415_011.png)
 
-Rho:
-![f](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415_011.png)
+P | Rho
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_092716_p_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415_011.png)
 
 #### 10 1-minute lags ####
-Vx:
-![vx](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415.png)
+*Note that this is **Vx** and **By, Bz**, just in one row to minimize giant figures*
 
-By:
-![vx](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415.png)
+Vx | By | Bz
+:--:|:--:|:--:
+![vx](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415.png) | ![vx](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415.png) | ![vx](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415.png)
 
-Bz:
-![vx](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415.png)
-
-Jx:
-![vx](figures/PNGs/Y0Correlations-Near_092716_jx_8 9101112131415.png)
-Jy:
-![vx](figures/PNGs/Y0Correlations-Near_092716_jy_8 9101112131415.png)
-Jz:
-![vx](figures/PNGs/Y0Correlations-Near_092716_jz_8 9101112131415.png)
+Jx | Jy | Jz
+:--:|:--:|:--:
+![vx](figures/PNGs/Y0Correlations-Near_092716_jx_8 9101112131415.png) | ![vx](figures/PNGs/Y0Correlations-Near_092716_jy_8 9101112131415.png) | ![vx](figures/PNGs/Y0Correlations-Near_092716_jz_8 9101112131415.png)
 
 Rho:
 ![vx](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415.png)
 
 
-I'm still generating the plots for Uy, Uz, Bx, By, Jx-z, Rho, and P, but this required regenerating all the mat files (and finding more ways to free up hard drive space and deal with corrupt mat files from when it runs out), and now generating a correlation matrix for each variable, which takes ~1 hour each for the full solar wind input model. Will update here when they  complete.
+I'm still generating more plots, but this requires regenerating all the mat files (and finding more ways to free up hard drive space and deal with corrupt mat files from when it runs out), and now generating a correlation matrix for each variable, which takes ~1 hour each for the full solar wind input model. Will update here when they  complete.
 
 ### October 17, 2016 ###
 Turns out the cdf files for each timestep in a run don't keep consistent ordering of rows. Sorting each cdf file by X, Y, and Z results in a matrix that can be correlated row-wise through time. The following figures use a 10-lag (5 hour) impulse response model of V_x given all solar wind B components, V components, N, and T. Since there are no grid points at Y=0, here are the closest values at Y=0.125:
