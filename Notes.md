@@ -26,6 +26,10 @@ Vx | Vy | Vz
 :--:|:--:|:--:
 ![f](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_uy_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_uz_8 9101112131415_011.png)
 
+Jx | Jy | Jz
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_092716_jx_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_jy_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_jz_8 9101112131415_011.png)
+
 P | Rho
 :--:|:--:
 ![f](figures/PNGs/Y0Correlations-Near_092716_p_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415_011.png)
