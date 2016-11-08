@@ -133,6 +133,7 @@ view(0,90)
 xlabel('X (R_E)')
 ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
 ch=colorbar;
+axis square
 set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
 title(sprintf('Correlations of %s on the Y=0 cutplane interpolated from grid points of Y<=1',runvars{xvar}))
 print('-depsc2','-r200',sprintf('figures/Y0Correlations-Near_%s.eps',FigureBase))
