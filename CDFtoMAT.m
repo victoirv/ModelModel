@@ -1,17 +1,20 @@
-function CDFtoMAT(runname,keepvars)
+function CDFtoMAT(runname,keepvars,basepath)
 %Cut each slice from ~73MB to ~6MB and a format that can be read in chunks
 
 if(nargin<1 || isempty(runname))
     runname='Victoir_Veibell_092716_1'; %Default to ux
 end
-if(nargin<2)
+if(nargin<2 || isempty(keepvars))
     keepvars={'x','y','z','ux','uy','uz','bx','by','bz','jx','jy','jz','rho','p'}; 
+end
+if(nargin<3 || isempty(basepath))
+    basepath='/media/D/CCMC';
+    %basepath='/home/victoir/Work/Differences/data'; 
 end
 
 
-
     %Find all CDF files for each timestep and read them in to one array
-    basedir=sprintf('/home/victoir/Work/Differences/data/%s/GM_CDF/',runname);
+    basedir=sprintf('%s/%s/GM_CDF/',basepath,runname);
     files=dir(sprintf('%s/*cdf',basedir));
     
     

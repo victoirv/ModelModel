@@ -5,7 +5,8 @@
 
 
 ## History ##
-* [October 26: One second data](#october-26-2016)
+* [November 8: Ten minute data](#november-8-2016)
+* [October 26: One minute data](#october-26-2016)
 * [October 17: 3D Correlation Plots](#october-17-2016)
 * [September 27: Optimization](#september-27-2016)
 * [September 5: Vx vs Vx](#september-5-2016)
@@ -13,6 +14,19 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### November 8, 2016 ###
+Looking at the 8 days of 10-minute cadence data with a 10-lag IR model shows relatively high correlations:
+
+Vx | Bz
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_8 9101112131415_010 0.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_bz_8 9101112131415_010 0.png)
+
+Rho | P
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_rho_8 9101112131415_010 0.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_p_8 9101112131415_010 0.png)
+
+*Note for future reference with this model: The run was originally started with 1-minute cadence, then switched over because it caused issues on the CCMC side. They ended up providing roughly two days of 1-minute data followed by six days of 10-minute data, but the solar wind data was 1-minute the whole way through. Both had to be organized onto the same timescale, and I did that by keeping every cdf file and solar wind entry with a minute ending in 0 (e.g. 1:30, 1:40, 1:50, 2:00). There were also two cdf files (at least. Two with minutes ending in 0) occurring on the same time step, but different endings (e.g. 3d\__var_1_e20100101-065000-304.out and 3d__var_1_e20100101-065000-391.out), so not knowing the significance I just kept the lower numbered version.*
+
 ### October 26, 2016 ###
 Looking at the results for the CCMC run with one-minute cadence produces the following plots.
 

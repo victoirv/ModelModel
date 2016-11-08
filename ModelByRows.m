@@ -1,4 +1,4 @@
-function ModelByRows(runname,runvars,xvar,fvar,IRParam)
+function ModelByRows(runname,runvars,xvar,fvar,IRParam,basepath)
 
 if(nargin<1 || isempty(runname))
     runname='Victoir_Veibell_092716_1'; %Default to ux
@@ -16,8 +16,10 @@ if(nargin<5 || isempty(IRParam))
     IRParam=[0 10 0]; %Default to 10 lags, no persist, no advance prediction
     %Make [0 1 1] for straight regression
 end
-
-
+if(nargin<6 || isempty(basepath))
+    basepath='/media/D/CCMC';
+    %basepath='/home/victoir/Work/Differences/data'; 
+end
 filename=sprintf('data/%s/SolarWindData.mat',runname);
 
 if(exist(filename,'file'))
@@ -36,7 +38,7 @@ else
 end
 
 
-basedir=sprintf('/home/victoir/Work/Differences/data/%s/GM_CDF/',runname);
+basedir=sprintf('%s/%s/GM_CDF/',basepath,runname);
 files=dir(sprintf('%s/*%s.mat',basedir,strjoin(runvars,'')));
 FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},num2str(fvar,'%d'),num2str(IRParam,'%d'));
 
