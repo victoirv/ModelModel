@@ -5,6 +5,7 @@
 
 
 ## History ##
+* [November 15: Comparison](#november-15-2016)
 * [November 8: Ten minute data](#november-8-2016)
 * [October 26: One minute data](#october-26-2016)
 * [October 17: 3D Correlation Plots](#october-17-2016)
@@ -14,6 +15,45 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### November 15, 2016 ###
+Comparing results of my linear regression code to that of vcaetto's linear regression results finds similar results, but with noticeable differences, mostly in terms of correlation values rather than structure. Whether these are due to the difference in interpolation (I use an average of the nearest slices to Y=0 direct from the cdf files, he uses Brian's code to interpolate an average Y=0 plane from the entire grid, as I understand it) or due to something else remains to be tested:
+
+Vx-Mine | Vx-His
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_ux.png)
+Vy-Mine | Vy-His
+![f](figures/PNGs/Y0Correlations-Near_092716_uy_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_uy.png)
+Vz-Mine | Vz-His
+![f](figures/PNGs/Y0Correlations-Near_092716_uz_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_uz.png)
+Bx-Mine | Bx-His
+![f](figures/PNGs/Y0Correlations-Near_092716_bx_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_bx.png)
+By-Mine | By-His
+![f](figures/PNGs/Y0Correlations-Near_092716_by_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_by.png)
+Bz-Mine | Bz-His
+![f](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_bz.png)
+P-Mine | P-His
+![f](figures/PNGs/Y0Correlations-Near_092716_p_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_p.png)
+Rho-Mine | Rho-His
+![f](figures/PNGs/Y0Correlations-Near_092716_rho_8 9101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_rho.png)
+
+Also took a shot at making X=0 and Z=0 cutplanes to see if anything interesting popped up:
+
+Vx: X=0 | Y=0 | Z=0
+:--:|:--:|:--:
+![f](figures/PNGs/X0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](figures/PNGs/Z0Correlations-Near_092716_ux_8 9101112131415_011.png)
+
+Bz: X=0 | Y=0 | Z=0
+:--:|:--:|:--:
+![f](figures/PNGs/X0Correlations-Near_092716_bz_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415_011.png) | ![f](figures/PNGs/Z0Correlations-Near_092716_bz_8 9101112131415_011.png)
+
+It nicely illuminates the structure of the bow shock, and then the magnetosphere. It's surprising that the correlations aren't higher between solar wind inputs and the region of space outside the magnetosphere, but perhaps the grid density is higher at the magnetosphere boundary and as such has more innate weight in training the regression model. To attempt to look at this, I made a histogram of the correlation value of all points with |Y|<1 with the expectation that, from just looking at the graph, if points were evenly distributed you'd have an average correlation of about 0.7, maybe less.
+
+Vx | Hist | Hist-3D
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](NoteFigures/Y0Correlations-Hist.png) | ![f](NoteFigures/Y0Correlations-Hist3.png)
+
+This suggests that the regions with higher correlation also have a greater density of grid points, and that perhaps the model is biased by this. That said, if those high-density regions are what people using the CCMC model are most interested in, then this bias in my model isn't really an issue.
+
 ### November 8, 2016 ###
 Looking at the 8 days of 10-minute cadence data with a 10-lag IR model shows relatively high correlations:
 

@@ -46,7 +46,7 @@ FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},num2str(fvar
 inputs=inputs(1:length(files),:);
 
 x=zeros(length(files),1);
-corrmat=x.*-1;
+corrmat=x-1;
 chunksize=5000;
 
 currentfile=sprintf('%s/%s',basedir,files(1).name);
@@ -132,9 +132,46 @@ surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colormap('parula')
 ch=colorbar;
 axis square
-set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+caxis([0 1])
 title(sprintf('Correlations of %s on the Y=0 cutplane interpolated from grid points of Y<=1',runvars{xvar}))
 print('-depsc2','-r200',sprintf('figures/Y0Correlations-Near_%s.eps',FigureBase))
 print('-dpng','-r200',sprintf('figures/PNGs/Y0Correlations-Near_%s.png',FigureBase))
+
+
+figure;
+POI=abs(x)<=1;
+[Yg,Zg]=meshgrid(linspace(min(y(POI)),max(y(POI)),200),linspace(min(z(POI)),max(z(POI)),200));
+vq=griddata(y(POI),z(POI),corrmat(POI),Yg,Zg);
+surf(Yg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('Y (R_E)')
+ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colormap('parula')
+ch=colorbar;
+axis square
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+caxis([0 1])
+title(sprintf('Correlations of %s on the X=0 cutplane interpolated from grid points of X<=1',runvars{xvar}))
+print('-depsc2','-r200',sprintf('figures/X0Correlations-Near_%s.eps',FigureBase))
+print('-dpng','-r200',sprintf('figures/PNGs/X0Correlations-Near_%s.png',FigureBase))
+
+figure;
+POI=abs(z)<=1;
+[Xg,Yg]=meshgrid(linspace(min(x(POI)),max(x(POI)),200),linspace(min(y(POI)),max(y(POI)),200));
+vq=griddata(x(POI),y(POI),corrmat(POI),Xg,Yg);
+surf(Xg,Yg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Y (R_E)') %Y-axis in plot is Z-axis in space
+colormap('parula')
+ch=colorbar;
+axis square
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+caxis([0 1])
+title(sprintf('Correlations of %s on the Z=0 cutplane interpolated from grid points of Z<=1',runvars{xvar}))
+print('-depsc2','-r200',sprintf('figures/Z0Correlations-Near_%s.eps',FigureBase))
+print('-dpng','-r200',sprintf('figures/PNGs/Z0Correlations-Near_%s.png',FigureBase))
