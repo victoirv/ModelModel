@@ -46,13 +46,15 @@ Bz: X=0 | Y=0 | Z=0
 :--:|:--:|:--:
 ![f](figures/PNGs/X0Correlations-Near_092716_bz_8 9101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_092716_bz_8 9101112131415_011.png) | ![f](figures/PNGs/Z0Correlations-Near_092716_bz_8 9101112131415_011.png)
 
-It nicely illuminates the structure of the bow shock, and then the magnetosphere. It's surprising that the correlations aren't higher between solar wind inputs and the region of space outside the magnetosphere, but perhaps the grid density is higher at the magnetosphere boundary and as such has more innate weight in training the regression model. To attempt to look at this, I made a histogram of the correlation value of all points with |Y|<1 with the expectation that, from just looking at the graph, if points were evenly distributed you'd have an average correlation of about 0.7, maybe less.
+It nicely illuminates the structure of the bow shock, and then the magnetosphere. It's surprising that the correlations aren't higher between solar wind inputs and the region of space outside the magnetosphere, ~~but perhaps the grid density is higher at the magnetosphere boundary and as such has more innate weight in training the regression model. To attempt to look at this, I made a histogram of the correlation value of all points with |Y|<1 with the expectation that, from just looking at the graph, if points were evenly distributed you'd have an average correlation of about 0.7, maybe less.~~
 
 Vx | Hist | Hist-3D
 :--:|:--:|:--:
 ![f](figures/PNGs/Y0Correlations-Near_092716_ux_8 9101112131415_011.png) | ![f](NoteFigures/Y0Correlations-Hist.png) | ![f](NoteFigures/Y0Correlations-Hist3.png)
 
-This suggests that the regions with higher correlation also have a greater density of grid points, and that perhaps the model is biased by this. That said, if those high-density regions are what people using the CCMC model are most interested in, then this bias in my model isn't really an issue.
+~~This suggests that the regions with higher correlation also have a greater density of grid points, and that perhaps the model is biased by this. That said, if those high-density regions are what people using the CCMC model are most interested in, then this bias in my model isn't really an issue.~~
+
+**Okay, wasn't thinking particularly well about this. IR models are entirely self-contained within a grid point and only concerned with changes in time, so the only way grid density would be an influence is if the CCMC model accounts for input solar wind conditions at all grid points to some degree and then propagation leads to higher density regions being more correlated with solar wind conditions.**
 
 ### November 8, 2016 ###
 Looking at the 8 days of 10-minute cadence data with a 10-lag IR model shows relatively high correlations:
