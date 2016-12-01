@@ -5,6 +5,7 @@
 
 
 ## History ##
+* [December 1: Better Comparison](#december-1-2016)
 * [November 15: Comparison](#november-15-2016)
 * [November 8: Ten minute data](#november-8-2016)
 * [October 26: One minute data](#october-26-2016)
@@ -15,6 +16,15 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### December 1, 2016 ###
+It appears that using Brian's interpolation results, along with accounting for the fact that Vincent is doing `r^2` and `corrcoef` just does `r` is enough to account for the differences:
+
+Vx-Mine | Vx-His
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Brian-Near_041316_011.png) | ![f](figures/PNGs/vcaetto/linear_ux.png)
+
+
+
 ### November 15, 2016 ###
 Comparing results of my linear regression code to that of vcaetto's linear regression results finds similar results, but with noticeable differences, mostly in terms of correlation values rather than structure. Whether these are due to the difference in interpolation (I use an average of the nearest slices to Y=0 direct from the cdf files, he uses Brian's code to interpolate an average Y=0 plane from the entire grid, as I understand it) or due to something else remains to be tested:
 
