@@ -1,14 +1,18 @@
-function ModelModels3D(modelnum,inputnum)
+function ModelModels3D(modelnum,inputnum,IRParam)
 if(nargin<1)
     modelnum=7; %Default to ux
 end
 if(nargin<2)
     inputnum=[8:15]; 
 end
+if(nargin<3 || isempty(IRParam))
+    IRParam=[0 10 0]; %Default to 10 lags, no persist, no advance prediction
+    %Make [0 1 1] for straight regression
+end
 
 %Define what run you want to use
 runname='Victoir_Veibell_041316_1';
-filenamecorr=sprintf('data/%s/DifferencesData_%s_all_3D_corr_%d_%s.mat',runname,runname,modelnum,num2str(inputnum,'%d'));
+filenamecorr=sprintf('data/%s/DifferencesData_%s_all_3D_corr_%d_%s_%s.mat',runname,runname,modelnum,sprintf('%d',inputnum),sprintf('%d',IRParam));
 
 %Test if correlation data already exists for this particular set of inputs
 %and outputs (saves half an hour easily if so)
@@ -88,8 +92,7 @@ if(~exist(filenamecorr,'file'))
     corrmat=zeros(1,max(size(readmat)));
     corrmatv=zeros(1,max(size(readmat)));
     for i=1:max(size(readmat))
-        [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,4);
-        %[~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),0,1,0,1); %Linear regression of same-time inputs to output
+        [~,~,~,~,corr]=IR(readmat(:,i,modelnum),bininputs(:,inputnum),IRParam(1),IRParam(2),0,IRParam(3));
         corrmat(i)=corr;
         corrmatv(i)=readmat(1,i,modelnum);
     end

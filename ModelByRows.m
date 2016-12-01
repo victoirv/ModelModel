@@ -40,7 +40,7 @@ end
 
 basedir=sprintf('%s/%s/GM_CDF/',basepath,runname);
 files=dir(sprintf('%s/*%s.mat',basedir,strjoin(runvars,'')));
-FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},num2str(fvar,'%d'),num2str(IRParam,'%d'));
+FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},sprintf('%d',fvarf_f),sprintf('%d',IRParam));
 
 %Because the model will output all solar wind conditions, but only the first subset of model run data once you hit a file size limit
 inputs=inputs(1:length(files),:);
