@@ -1,8 +1,8 @@
 function ModelModels3D(modelnum,inputnum,IRParam)
-if(nargin<1)
+if(nargin<1 || isempty(modelnum))
     modelnum=7; %Default to ux
 end
-if(nargin<2)
+if(nargin<2 || isempty(inputnum))
     inputnum=[8:15]; 
 end
 if(nargin<3 || isempty(IRParam))
@@ -13,6 +13,7 @@ end
 %Define what run you want to use
 runname='Victoir_Veibell_041316_1';
 filenamecorr=sprintf('data/%s/DifferencesData_%s_all_3D_corr_%d_%s_%s.mat',runname,runname,modelnum,sprintf('%d',inputnum),sprintf('%d',IRParam));
+FigureBase=sprintf('%s_%d_%s_%s',runname(end-7:end-2),modelnum,sprintf('%d',inputnum),sprintf('%d',IRParam));
 
 %Test if correlation data already exists for this particular set of inputs
 %and outputs (saves half an hour easily if so)
@@ -117,6 +118,26 @@ end
 %%%%%%%%%%%%%%%%%%%%%
 %Plotting
 %%%%%%%%%%%%%%%%%%%%%
+
+
+figure;
+POI=abs(Y)<=1;
+[Xg,Zg]=meshgrid(linspace(min(X(POI)),max(X(POI)),200),linspace(min(Z(POI)),max(Z(POI)),200));
+vq=griddata(X(POI),Z(POI),corrmat(POI).^2,Xg,Zg);
+surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colormap('parula')
+ch=colorbar;
+axis square
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+caxis([0 1])
+title(sprintf('Correlations for %s on the Y=0 cutplane interpolated from grid points of Y<=1'))
+print('-depsc2','-r200',sprintf('figures/Y0Correlations-Brian-Near_%s.eps',FigureBase))
+print('-dpng','-r200',sprintf('figures/PNGs/Y0Correlations-Brian-Near_%s.png',FigureBase))
+
+
 POI=(abs(Y)<=0.2);
 scatter3(X(POI),Y(POI),Z(POI),[],corrmat(POI));
 view(-50,30)
@@ -128,6 +149,8 @@ print('-depsc2','-r200', 'NoteFigures/ClosestY0Points.eps')
 print('-dpng','-r200', 'NoteFigures/ClosestY0Points.png')
 %Verification
 %scatter3(X(POI),Y(POI),Z(POI),[],corrmatv(POI));
+
+
 
 
 %Plot all data

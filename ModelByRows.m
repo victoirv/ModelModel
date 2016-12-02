@@ -40,10 +40,21 @@ end
 
 basedir=sprintf('%s/%s/GM_CDF/',basepath,runname);
 files=dir(sprintf('%s/*%s.mat',basedir,strjoin(runvars,'')));
-FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},sprintf('%d',fvarf_f),sprintf('%d',IRParam));
+FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},sprintf('%d',fvar),sprintf('%d',IRParam));
 
 %Because the model will output all solar wind conditions, but only the first subset of model run data once you hit a file size limit
-inputs=inputs(1:length(files),:);
+nfiles=length(files);
+if(nfiles<(2*length(inputs)))    
+    binsize=round(length(inputs)/nfiles);
+    fprintf('Looks like file and solar wind cadence is different. Binning solar wind with a bin size of %d.\n',binsize);
+    for i=1:(nfiles-1)
+        bininputs(i,:)=median(inputs((i-1)*binsize+1:i*binsize,:));
+    end
+    bininputs(nfiles,:)=median(inputs((nfiles-1)*binsize+1:end,:),1);
+    inputs=bininputs;
+else
+    inputs=inputs(1:length(files),:);
+end
 
 x=zeros(length(files),1);
 corrmat=x-1;
@@ -54,7 +65,7 @@ matObj=matfile(currentfile);
 N = max(size(matObj,'readdata'));
 NVars = length(matObj.keepvars);
 
-filenamecorr=sprintf('data/%s/%s_%s_%s_corr.mat',runname,num2str(xvar),num2str(fvar,'%d'),num2str(IRParam,'%d'));
+filenamecorr=sprintf('data/%s/%s_%s_%s_corr.mat',runname,sprintf('%d',xvar),sprintf('%d',fvar),sprintf('%d',IRParam));
 %corrObj=matfile(filenamecorr,'Writable',true);
 
 x=double(matObj.readdata(:,1));
@@ -127,7 +138,7 @@ end
 figure;
 POI=abs(y)<=1;
 [Xg,Zg]=meshgrid(linspace(min(x(POI)),max(x(POI)),200),linspace(min(z(POI)),max(z(POI)),200));
-vq=griddata(x(POI),z(POI),corrmat(POI),Xg,Zg);
+vq=griddata(x(POI),z(POI),corrmat(POI).^2,Xg,Zg);
 surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('X (R_E)')

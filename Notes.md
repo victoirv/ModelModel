@@ -17,12 +17,27 @@
 
 * * *
 ### December 1, 2016 ###
-It appears that using Brian's interpolation results, along with accounting for the fact that Vincent is doing `r^2` and `corrcoef` just does `r` is enough to account for the differences:
+It appears that using older code, along with accounting for the fact that Vincent is doing `r^2` and `corrcoef` just does `r` is enough to account for the differences:
 
 Vx-Mine | Vx-His
 :--:|:--:
 ![f](figures/PNGs/Y0Correlations-Brian-Near_041316_011.png) | ![f](figures/PNGs/vcaetto/linear_ux.png)
 
+Issue was that newer code was expecting solar wind cadence to be the same as cdf-file cadence. With some new code in there to automatically adapt it if they're significantly different (bin by increments of round(nSolarWind/nFiles)), I get good results again:
+
+Vx-Old | Vx-New
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Brian-Near_041316_011.png) | ![f](figures/PNGs/Y0Correlations-Near_041316_ux_89101112131415_011.png)
+
+And then just to make sure the comparisons are good across variables:
+
+Bz-Mine | Bz-His
+:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_041316_bz_89101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_bz.png)
+P-Mine | P-His
+![f](figures/PNGs/Y0Correlations-Near_041316_p_89101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_p.png)
+Rho-Mine | Rho-His
+![f](figures/PNGs/Y0Correlations-Near_041316_rho_89101112131415_011.png) | ![f](figures/PNGs/vcaetto/linear_rho.png)
 
 
 ### November 15, 2016 ###
