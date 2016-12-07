@@ -44,7 +44,7 @@ FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},sprintf('%d'
 
 %Because the model will output all solar wind conditions, but only the first subset of model run data once you hit a file size limit
 nfiles=length(files);
-if(nfiles<(2*length(inputs)))    
+if((2*nfiles)<length(inputs)) %If there are more than twice as many solar wind inputs as files
     binsize=round(length(inputs)/nfiles);
     fprintf('Looks like file and solar wind cadence is different. Binning solar wind with a bin size of %d.\n',binsize);
     for i=1:(nfiles-1)

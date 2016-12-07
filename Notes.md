@@ -1,10 +1,9 @@
 ## To-Do ##
-* Correlation values
-* Find a way to print isosurfaces without corruption
-* Animation
+
 
 
 ## History ##
+* [December 6: Model Differences](#december-6-2016)
 * [December 1: Better Comparison](#december-1-2016)
 * [November 15: Comparison](#november-15-2016)
 * [November 8: Ten minute data](#november-8-2016)
@@ -16,6 +15,27 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### December 6, 2016 ###
+We wanted to compare how a single lag regression model compares to a ten-lag IR model. This involved generating the correlation matrix for both models, then making plots of the differences between the two. For example, using the first 30-minute cadence run:
+
+Vx: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_041316_ux_89101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_041316_ux_89101112131415_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_041316_ux_89101112131415_0100_011.png)
+
+Or for Bz for the 10-minute cadence model:
+
+Bz: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_bz_89101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_bz_89101112131415_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_bz_89101112131415_0100_011.png)
+
+And then for the difference in one model (in this case the 10-lag model) comparing the difference in correlation between the 10-minute cadence data and the 30-minute cadence data:
+
+Bz: 10-minute | 30-minute | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_bz_89101112131415_0100.png) | ![f](figures/PNGs/Y0Correlations-Near_041316_bz_89101112131415_0100.png) | ![f](NoteFigures/Y0DiffCorrelations-Near_bz.png)
+
+The question here is whether the difference in correlations arises due to differences in the actual model, differences in the span of data (the 10-minute cadence model covers 7 days of data while the 30-minute model covers 1 day), or some other statistical discrepancy. These things will be investigated, and further plots will be generated.
+
 ### December 1, 2016 ###
 It appears that using older code, along with accounting for the fact that Vincent is doing `r^2` and `corrcoef` just does `r` is enough to account for the differences:
 
