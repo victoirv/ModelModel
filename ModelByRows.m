@@ -26,14 +26,17 @@ if(exist(filename,'file'))
     load(filename)
 else
     %Variable names for model input data (solar wind)
-    inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]'};
+    inputvars={'Year','Month','Day','Hour','Min','Sec','Msec','Bx[nT]','By[nT]','Bz[nT]','Vx[km/s]','Vy[km/s]','Vz[km/s]','N[cm^(-3)]','T[Kelvin]','RhoVx^2','VxBs'};
     
     %Read in solar wind data
     inputs=dlmread(sprintf('data/%s/%s_IMF.txt',runname,runname));
     
+    %Add extra variables. Easier to do here than interpreting some function input as
+    %a mathetmatical expression on the matrix 
+    inputs(:,end+1)=inputs(:,14).*(inputs(:,11).^2); %rho*vx^2
+    inputs(:,end+1)=inputs(:,11).*(inputs(:,10)-abs(inputs(:,10))); %VxBs
     
-    %Bin the input data to be on the same grid as the model data that came
-    %from brian's code
+    
     save(filename,'inputs','inputvars');
 end
 
@@ -143,7 +146,7 @@ surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
-colormap('parula')
+colormap(parula(20))
 ch=colorbar;
 axis square
 %set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
@@ -163,7 +166,7 @@ surf(Yg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('Y (R_E)')
 ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
-colormap('parula')
+colormap(parula(20))
 ch=colorbar;
 axis square
 %set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
@@ -180,7 +183,7 @@ surf(Xg,Yg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Y (R_E)') %Y-axis in plot is Z-axis in space
-colormap('parula')
+colormap(parula(20))
 ch=colorbar;
 axis square
 %set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])

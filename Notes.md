@@ -1,8 +1,12 @@
 ## To-Do ##
-
+* Look at models of RhoVx^2 and VxBs predicting Vx
+* 1 lag 30 min vs 1 lag 10 minute
+* 6 coef 0 lag vs 1 coef 0 lag for 10 minute cadence
+* Reduce colormap to 20 colors
 
 
 ## History ##
+* [December 9: Further Differences](#december-9-2016)
 * [December 6: Model Differences](#december-6-2016)
 * [December 1: Better Comparison](#december-1-2016)
 * [November 15: Comparison](#november-15-2016)
@@ -15,6 +19,27 @@
 * [August 31: First 3D attempts](#august-31-2016)
 
 * * *
+### December 9, 2016 ###
+Continuing that analysis, looking more specifically at differences between the 1-lag and 10-lag models:
+
+Vx: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_89101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_89101112131415_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_ux_89101112131415_0100_011.png)
+
+Bz: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_bz_89101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_bz_89101112131415_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_bz_89101112131415_0100_011.png#)
+
+Rho: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_rho_89101112131415_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_rho_89101112131415_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_rho_89101112131415_0100_011.png#)
+
+Vx from RhoVx^2: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_16_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_16_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_ux_16_0100_011.png#)
+
+This lack of correlation seems odd, but might be due to only using one input variable in the model (RhoVx^2 being treated as one variable). I'm going to start working on plots that show how much each input variable contributes to the model at each pixel to see if anything in particular shows up.
+
 ### December 6, 2016 ###
 We wanted to compare how a single lag regression model compares to a ten-lag IR model. This involved generating the correlation matrix for both models, then making plots of the differences between the two. For example, using the first 30-minute cadence run:
 

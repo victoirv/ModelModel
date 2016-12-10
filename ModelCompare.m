@@ -56,11 +56,11 @@ surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
 view(0,90)
 xlabel('X (R_E)')
 ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
-colormap('parula')
+colormap(parula(20))
 ch=colorbar;
 axis square
-%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
-caxis([0 1])
+set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+%caxis([0 1])
 title(sprintf('Difference in correlations of %s on the Y=0 cutplane interpolated from grid points of Y<=1',runvars{xvar}))
 print('-depsc2','-r200',sprintf('figures/Y0DiffCorrelations-Near_%s.eps',FigureBase))
 print('-dpng','-r200',sprintf('figures/PNGs/Y0DiffCorrelations-Near_%s.png',FigureBase))
