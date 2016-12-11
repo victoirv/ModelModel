@@ -38,7 +38,26 @@ Vx from RhoVx^2: 1-lag | 10-lag | Difference
 :--:|:--:|:--:
 ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_16_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_16_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_ux_16_0100_011.png#)
 
+Vx from VxBs: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_17_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_17_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_ux_17_0100_011.png)
+
+Vx from [RhoVx^2, VxBs]: 1-lag | 10-lag | Difference
+:--:|:--:|:--:
+![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_1617_011.png) | ![f](figures/PNGs/Y0Correlations-Near_6_1_fu_ux_1617_0100.png) | ![f](figures/PNGs/Y0DiffCorrelations-Near_6_1_fu_ux_1617_0100_011.png)
+
 This lack of correlation seems odd, but might be due to only using one input variable in the model (RhoVx^2 being treated as one variable). I'm going to start working on plots that show how much each input variable contributes to the model at each pixel to see if anything in particular shows up.
+
+##### Verification attempts #####
+Wanted to explore a couple of potential issues. First generated a model where solar wind was just random noise to see what kind of correlation the model would get from 7 random variables. Everything came up with correlation of almost 0 with no structure so no problem there. Next question was which variables contributed the most to any particular correlation. Three plots were created for a 1-lag model of Vx; one showing which had the largest coefficient at each location, one with the coefficient/(mean variable value) as an attempt at normalization, and another showing which variable had the highest R^2 value against the model at each location.
+
+Significant inputs from coef | Significant inputs from coef/mean | Significant inputs from R^2
+:--:|:--:|:--:
+![f](figures/PNGs/Y0MostSig-Near_6_1_fu_ux_910111415_011.png) | ![f](figures/PNGs/Y0MostSig2-Near_6_1_fu_ux_910111415_011.png) | ![f](figures/PNGs/Y0MostSigr-Near_6_1_fu_ux_910111415_011.png)
+
+These three methods come up with significantly different results. Other than Vx outside the magnetosphere and Bz close to earth, most of the magnetosphere shows a different largest R^2 variable than largest model coefficient variable, and the normalized version is different all over. The question is then which version most meaningfully depicts the impact of each input variable on the model. Individual tests of R^2 seem reasonable for a single lag linear model, but scaling to a full IR model could become computationally expensive. Using the model coefficients directly makes sense, but perhaps a better normalization method needs to be devised. 
+
+
 
 ### December 6, 2016 ###
 We wanted to compare how a single lag regression model compares to a ten-lag IR model. This involved generating the correlation matrix for both models, then making plots of the differences between the two. For example, using the first 30-minute cadence run:

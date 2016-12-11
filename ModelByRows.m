@@ -34,7 +34,7 @@ else
     %Add extra variables. Easier to do here than interpreting some function input as
     %a mathetmatical expression on the matrix 
     inputs(:,end+1)=inputs(:,14).*(inputs(:,11).^2); %rho*vx^2
-    inputs(:,end+1)=inputs(:,11).*(inputs(:,10)-abs(inputs(:,10))); %VxBs
+    inputs(:,end+1)=inputs(:,11).*(inputs(:,10)-abs(inputs(:,10)))./2; %VxBs
     
     
     save(filename,'inputs','inputvars');
@@ -59,9 +59,10 @@ else
     inputs=inputs(1:length(files),:);
 end
 
+
+
 x=zeros(length(files),1);
-corrmat=x-1;
-chunksize=5000;
+chunksize=15000;
 
 currentfile=sprintf('%s/%s',basedir,files(1).name);
 matObj=matfile(currentfile);
@@ -71,16 +72,23 @@ NVars = length(matObj.keepvars);
 filenamecorr=sprintf('data/%s/%s_%s_%s_corr.mat',runname,sprintf('%d',xvar),sprintf('%d',fvar),sprintf('%d',IRParam));
 %corrObj=matfile(filenamecorr,'Writable',true);
 
+RandTest=0;
+if(RandTest==1)
+   inputs(:,fvar)=rand(size(inputs(:,fvar)));
+   FigureBase=sprintf('%s_RandVerify',FigureBase);
+   filenamecorr=strrep(filenamecorr,'corr','RandVerify_corr');
+end
+
 x=double(matObj.readdata(:,1));
 y=double(matObj.readdata(:,2));
 z=double(matObj.readdata(:,3));
 
-%{
-corrObj.x=x;
-corrObj.y=y;
-corrObj.z=z;
-corrObj.corrmat=zeros(length(x),1);
-%}
+corrmat=zeros(length(x),1);
+mostsig=corrmat;
+mostsig2=corrmat;
+mostsigr=corrmat;
+
+normalizedInput=mean(inputs(:,fvar));
 
 if(~exist(filenamecorr,'file'))
     startpoint=1;
@@ -117,13 +125,23 @@ if(startpoint>0)
         end
         fprintf('Correlating elements %d - %d\n',startpoint,endpoint-1);
         for j=1:(endpoint-startpoint)
-            [~,~,~,~,corr]=IR(data(:,j,xvar),inputs(:,fvar),IRParam(1),IRParam(2),0,IRParam(3));
+            [~,cb,~,~,corr]=IR(data(:,j,xvar),inputs(:,fvar),IRParam(1),IRParam(2),0,IRParam(3));
             corrmat(startpoint+j-1)=corr;
+            
+            [~,mostsig(startpoint+j-1)]=max(cb);
+            [~,mostsig2(startpoint+j-1)]=max(cb'./normalizedInput);
+            rs=1:length(fvar);
+            for k=1:length(fvar)
+                r2=regstats(data(:,j,xvar),inputs(:,fvar(k)),'linear','rsquare');
+                rs(k)=r2.rsquare;
+            end
+            [~,maxi]=max(rs);
+            mostsigr(startpoint+j-1)=maxi;
         end
         %Write results so far to file. Doesn't seem to like vector addressing
         %corrObj.corrmat(startpoint:endpoint)=corrmat(startpoint:endpoint);
 
-        save(filenamecorr,'x','y','z','corrmat','-v7.3');
+        save(filenamecorr,'x','y','z','corrmat','mostsig','mostsig2','mostsigr','-v7.3');
         if(startpoint+chunksize>N)
             startpoint=0;
         elseif(endpoint+chunksize>N)
@@ -135,7 +153,7 @@ if(startpoint>0)
             endpoint=startpoint+chunksize-1;
         end
     end
-    save(filenamecorr,'x','y','z','corrmat','-v7.3');
+    save(filenamecorr,'x','y','z','corrmat','mostsig','mostsig2','mostsigr','-v7.3');
 end
 
 figure;
@@ -155,7 +173,62 @@ title(sprintf('Correlations of %s on the Y=0 cutplane interpolated from grid poi
 print('-depsc2','-r200',sprintf('figures/Y0Correlations-Near_%s.eps',FigureBase))
 print('-dpng','-r200',sprintf('figures/PNGs/Y0Correlations-Near_%s.png',FigureBase))
 
+figure;
+POI=abs(y)<=1;
+[Xg,Zg]=meshgrid(linspace(min(x(POI)),max(x(POI)),200),linspace(min(z(POI)),max(z(POI)),200));
+vq=griddata(x(POI),z(POI),mostsig(POI),Xg,Zg);
+surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colormap(parula(length(fvar)))
+ch=colorbar;
+caxis([0 length(fvar)+1])
+colorbar('YTick',0:length(fvar)+1,'YTickLabel',[' ' inputvars(fvar) ' '])
+axis square
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+%caxis([0 1])
+title(sprintf('Most Significant variable per pixel on model of %s ',runvars{xvar}))
+print('-depsc2','-r200',sprintf('figures/Y0MostSig-Near_%s.eps',FigureBase))
+print('-dpng','-r200',sprintf('figures/PNGs/Y0MostSig-Near_%s.png',FigureBase))
 
+figure;
+POI=abs(y)<=1;
+[Xg,Zg]=meshgrid(linspace(min(x(POI)),max(x(POI)),200),linspace(min(z(POI)),max(z(POI)),200));
+vq=griddata(x(POI),z(POI),mostsigr(POI),Xg,Zg);
+surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colormap(parula(length(fvar)))
+ch=colorbar;
+caxis([0 length(fvar)+1])
+colorbar('YTick',0:length(fvar)+1,'YTickLabel',[' ' inputvars(fvar) ' '])
+axis square
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+%caxis([0 1])
+title(sprintf('Most Significant variable per pixel on model of %s ',runvars{xvar}))
+print('-depsc2','-r200',sprintf('figures/Y0MostSigr-Near_%s.eps',FigureBase))
+print('-dpng','-r200',sprintf('figures/PNGs/Y0MostSigr-Near_%s.png',FigureBase))
+
+figure;
+POI=abs(y)<=1;
+[Xg,Zg]=meshgrid(linspace(min(x(POI)),max(x(POI)),200),linspace(min(z(POI)),max(z(POI)),200));
+vq=griddata(x(POI),z(POI),mostsig2(POI),Xg,Zg);
+surf(Xg,Zg,vq,'EdgeColor','none','LineStyle','none','FaceLighting','phong')
+view(0,90)
+xlabel('X (R_E)')
+ylabel('Z (R_E)') %Y-axis in plot is Z-axis in space
+colormap(parula(length(fvar)))
+ch=colorbar;
+caxis([0 length(fvar)+1])
+colorbar('YTick',0:length(fvar)+1,'YTickLabel',[' ' inputvars(fvar) ' '])
+axis square
+%set(ch,'ytick',[get(ch,'ytick') max(get(ch,'ylim'))])
+%caxis([0 1])
+title(sprintf('Most Significant variable per pixel on model of %s ',runvars{xvar}))
+print('-depsc2','-r200',sprintf('figures/Y0MostSig2-Near_%s.eps',FigureBase))
+print('-dpng','-r200',sprintf('figures/PNGs/Y0MostSig2-Near_%s.png',FigureBase))
 
 
 figure;
