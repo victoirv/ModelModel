@@ -1,4 +1,12 @@
 function ModelModels3D(modelnum,inputnum,IRParam)
+%function ModelModels3D(modelnum,inputnum,IRParam)
+%Takes CCMC model cdf files and does correlation for all points in 3D space
+%(as opposed to cut-planes). Does this all at once, so needs enough memory
+%for all files. If memory is a limit, use ModelByRows and CDFtoMAT
+%* Can define 3 inputs to IR(): numxcoef, numfcoef, and advance
+%** Advance parameter added to compare to R^2 models since default IR
+%   behavior is to predict one step ahead (advance=0)
+
 if(nargin<1 || isempty(modelnum))
     modelnum=7; %Default to ux
 end

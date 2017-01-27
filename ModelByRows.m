@@ -1,4 +1,16 @@
-function ModelByRows(runname,runvars,xvar,fvar,IRParam,basepath)
+function ModelByRows(runname,runvars,xvar,fvar,IRParam,basepath,normalize)
+%function ModelByRows(runname,runvars,xvar,fvar,IRParam,basepath)
+%Model a CCMC model using IR(), but do it piecewise by location to avoid
+%overloading memory. Does 15,000 rows at a time (defined in 'chunksize')
+%* Requires having first converted cdf files to mat files using CDFtoMAT
+%* Assumes default solar wind input (15 vars defined in 'inputvars')
+%* Defaults to using vars in 'runvars', should be whatever you kept in
+%   CDFtoMAT
+%* Can define 3 inputs to IR(): numxcoef, numfcoef, and advance
+%** Advance parameter added to compare to R^2 models since default IR
+%   behavior is to predict one step ahead (advance=0)
+%* Base path for CDF files is definable. Base for solar wind is expected to
+%   be in subdirectory of current folder/data/<model name>/SolarWind.mat
 
 if(nargin<1 || isempty(runname))
     runname='Victoir_Veibell_092716_1'; %Default to ux
@@ -20,6 +32,10 @@ if(nargin<6 || isempty(basepath))
     basepath='/media/D/CCMC';
     %basepath='/home/victoir/Work/Differences/data'; 
 end
+if(nargin<7 || isempty(normalize))
+    normalize=0;
+end
+
 filename=sprintf('data/%s/SolarWindData.mat',runname);
 
 if(exist(filename,'file'))
@@ -45,6 +61,14 @@ basedir=sprintf('%s/%s/GM_CDF/',basepath,runname);
 files=dir(sprintf('%s/*%s.mat',basedir,strjoin(runvars,'')));
 FigureBase=sprintf('%s_%s_%s_%s',runname(end-7:end-2),runvars{xvar},sprintf('%d',fvar),sprintf('%d',IRParam));
 
+filenamecorr=sprintf('data/%s/%s_%s_%s',runname,sprintf('%d',xvar),sprintf('%d',fvar),sprintf('%d',IRParam));
+
+if(normalize)
+    FigureBase=sprintf('%s_norm',FigureBase);
+    filenamecorr=sprintf('%s_norm',filenamecorr);
+end
+
+
 %Because the model will output all solar wind conditions, but only the first subset of model run data once you hit a file size limit
 nfiles=length(files);
 if((2*nfiles)<length(inputs)) %If there are more than twice as many solar wind inputs as files
@@ -62,21 +86,19 @@ end
 
 
 x=zeros(length(files),1);
-chunksize=15000;
+chunksize=14000;
 
 currentfile=sprintf('%s/%s',basedir,files(1).name);
 matObj=matfile(currentfile);
 N = max(size(matObj,'readdata'));
 NVars = length(matObj.keepvars);
 
-filenamecorr=sprintf('data/%s/%s_%s_%s_corr.mat',runname,sprintf('%d',xvar),sprintf('%d',fvar),sprintf('%d',IRParam));
-%corrObj=matfile(filenamecorr,'Writable',true);
 
 RandTest=0;
 if(RandTest==1)
    inputs(:,fvar)=rand(size(inputs(:,fvar)));
    FigureBase=sprintf('%s_RandVerify',FigureBase);
-   filenamecorr=strrep(filenamecorr,'corr','RandVerify_corr');
+   filenamecorr=sprintf('%s_RandVerify',filenamecorr);
 end
 
 x=double(matObj.readdata(:,1));
@@ -89,6 +111,9 @@ mostsig2=corrmat;
 mostsigr=corrmat;
 
 normalizedInput=mean(inputs(:,fvar));
+
+%Finalize filenamecorr
+filenamecorr=sprintf('%s_corr.mat',filenamecorr);
 
 if(~exist(filenamecorr,'file'))
     startpoint=1;
@@ -125,14 +150,41 @@ if(startpoint>0)
         end
         fprintf('Correlating elements %d - %d\n',startpoint,endpoint-1);
         for j=1:(endpoint-startpoint)
-            [~,cb,~,~,corr]=IR(data(:,j,xvar),inputs(:,fvar),IRParam(1),IRParam(2),0,IRParam(3));
+            try
+            if(normalize)
+                %Normalize/standardize: (y-ymean)/ysigma, same for x
+                Finput=bsxfun(@rdivide,bsxfun(@minus, inputs(:,fvar), mean(inputs(:,fvar))),std(inputs(:,fvar)));
+                Xinput=bsxfun(@rdivide,bsxfun(@minus, data(:,j,xvar), mean(data(:,j,xvar))),std(data(:,j,xvar)));
+                
+                %If a point has no change in value, zero out results
+                %instead of calling IR()
+                if(sum(~isnan(Xinput))>0)
+                 [~,cb,~,~,corr]=IR(Xinput,Finput,IRParam(1),IRParam(2),0,IRParam(3));
+                else
+                    corr=0;
+                    cb=cb.*0; %Assuming this happens in the middle of a run, not the first time
+                end
+            else
+                [~,cb,~,~,corr]=IR(data(:,j,xvar),inputs(:,fvar),IRParam(1),IRParam(2),0,IRParam(3));
+            end
+            catch
+                breakpoint=1;
+            end
             corrmat(startpoint+j-1)=corr;
             
             [~,mostsig(startpoint+j-1)]=max(cb);
             [~,mostsig2(startpoint+j-1)]=max(cb'./normalizedInput);
             rs=1:length(fvar);
             for k=1:length(fvar)
-                r2=regstats(data(:,j,xvar),inputs(:,fvar(k)),'linear','rsquare');
+                if(normalize)
+                    if(sum(~isnan(Xinput))>0)
+                        r2=regstats(Xinput,bsxfun(@rdivide,bsxfun(@minus, inputs(:,fvar(k)), mean(inputs(:,fvar(k)))),std(inputs(:,fvar(k)))),'linear','rsquare');
+                    else
+                        r2.rsquare=0;
+                    end
+                else
+                    r2=regstats(data(:,j,xvar),inputs(:,fvar(k)),'linear','rsquare');
+                end
                 rs(k)=r2.rsquare;
             end
             [~,maxi]=max(rs);
